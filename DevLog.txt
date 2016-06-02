@@ -4,6 +4,20 @@
  / /_/ /  __/ |/ / /___/ /_/ / /_/ / 
 /_____/\___/|___/_____/\____/\__, /  
                             /____/  
+
+______________________________________________________    
+6-1-16
+* Generated a list of class attributes on a separate doc, building block to code
+* Spirits high once more
+- Jackson Deysine
+______________________________________________________                          
+5-31-16
+* Plan solidified, spirits lowered but still firing with all cylinders
+- Max Bertfield
+______________________________________________________                            
+5-27-16
+* we all met up and planned, and played scrabble. This resulted in amazing team bonding a pretty clear insight to the future
+- Max Bertfield
 ——————————————————————————————————————————————————————
 5-22-16
 * Repository Created
@@ -12,12 +26,4 @@
 5-18-16
 * Idea Birthed
 - Jackson Deysine
-________________________________________
-5-27 - 16
-
-* we all met up and planned, and played scrabble. This resulted in amazing team bonding a pretty clear insight to the future
-
-______________________________________________________________
-5-31-16
-
-our plan was shattered when we found out we have only a week to code the project complete with SATs three finals each and several essays in that week as well. We wrote plan counting the hours we will be abvle to sleep all of next week in single digits. The end is near.
+______________________________________________________
