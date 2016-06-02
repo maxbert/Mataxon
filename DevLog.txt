@@ -5,7 +5,12 @@
 /_____/\___/|___/_____/\____/\__, /  
                             /____/  
 
-______________________________________________________                            
+______________________________________________________    
+6-1-16
+* Generated a list of class attributes on a separate doc, building block to code
+* Spirits high once more
+- Jackson Deysine
+______________________________________________________                          
 5-31-16
 * Plan solidified, spirits lowered but still firing with all cylinders
 - Max Bertfield
