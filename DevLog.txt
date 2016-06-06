@@ -9,7 +9,7 @@ ______________________________________________________
 6-5-16
 * Tile class and space class are nearly complete
 	* All tile subclasses, the letter classes, painstakingly finished
-* New, more accurate plan developed :Pig:
+* New, more accurate plan developed
 - Jackson Deysine
 ______________________________________________________    
 6-1-16
