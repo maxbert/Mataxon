@@ -1,4 +1,8 @@
-class Space{
+class BoardSpace{
+}
+
+
+class Space extends BoardSpace{
   int modifier;
   boolean playable;
   boolean wholeWord;
@@ -13,11 +17,11 @@ class Space{
   }
 }
 
-class BlackSpace extends Space{
-  int modifier = 0;
-  boolean playable = false;
+class BlankSpace extends Space{
+  int modifier = 1;
+  boolean playable = true;
   boolean wholeWord = false;
-  PImage img = loadImage("BlackSpace.jpg");
+  PImage img = loadImage("BlankSpace.jpg");
 }
 
 class DoubleLetter extends Space{

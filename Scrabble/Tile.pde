@@ -1,4 +1,4 @@
-class Tile{
+class Tile extends BoardSpace{
   String let;
   int val;
   PImage img;
