@@ -15,11 +15,14 @@ class Player{
   public void addToScore(int num){
      score += num;
   }
-  public void pickTiles(){
-     righty.fillHand(); 
+  public void pickTiles(Bag b){
+     righty.fillHand(b); 
   }
-  public void Exchange(int[] spots){
-    //righty.deposit
+  public void Exchange(int[] spots, Bag b){
+     for(int a : spots){
+        righty.deposit(a); 
+     }
+     righty.fillHand(b);
   }
   public void Play(int let){
     //righty.deposit
