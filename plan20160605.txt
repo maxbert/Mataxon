@@ -1,0 +1,11 @@
+   ____  __          
+   / __ \/ /___ _____ 
+  / /_/ / / __ `/ __ \
+ / ____/ / /_/ / / / /
+/_/   /_/\__,_/_/ /_/ 
+                        - As of 6/5/16
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Have a working game (placing tiles on board) by end of 6/7/16
+* Have a working two player game by 6/11/16
+* Complete an AI by 6/12/16
+* Be really cool the whole time B)
