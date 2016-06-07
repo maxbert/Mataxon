@@ -7,6 +7,10 @@ class Hand{
   public void fillHand(Bag b){
     while (hand.size() < 8){
       hand.add(b.take());}}
-  public void deposit ( 
+      
+  public Tile give(int n){
+      return hand.remove(n);}
+}
+          
   
   
