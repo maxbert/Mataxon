@@ -1,4 +1,5 @@
 class Bag{
+<<<<<<< HEAD
   ArrayList<Tile> bagged = new ArrayList<Tile>();
   Tile A1 = new A();
   bagged.add(A1);
@@ -201,4 +202,6 @@ Tile take(){
   
   
   
+=======
+>>>>>>> c58d24a9031aeb7d6fc23ec85c8b7949d0f1dc10
 }
