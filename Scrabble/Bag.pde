@@ -1,6 +1,7 @@
 class Bag{
-<<<<<<< HEAD
-  ArrayList<Tile> bagged = new ArrayList<Tile>();
+    ArrayList<Tile> bagged = new ArrayList<Tile>();
+   Bag(){
+
   Tile A1 = new A();
   bagged.add(A1);
   Tile A2 = new A();
@@ -35,14 +36,14 @@ class Bag{
   bagged.add(D3);
   Tile D4 = new D();
   bagged.add(D4);
-  Tile E1 new E();
+  Tile E1 =new E();
   bagged.add(E1);
   Tile E2 = new E();
   bagged.add(E2);
   Tile E3 = new E();
   bagged.add(E3);
   Tile E4 = new E();
-  bagged.add(E3);
+  bagged.add(E4);
   Tile E5 = new E();
   bagged.add(E5);
   Tile E6 = new E();
@@ -66,7 +67,7 @@ class Bag{
   bagged.add(F2);
   Tile G1 = new G();
   bagged.add(G1);
-  Tile G2 = new G2();
+  Tile G2 = new G();
   bagged.add(G2);
   Tile G3 = new G();
   bagged.add(G3);
@@ -74,7 +75,7 @@ class Bag{
   bagged.add(H1);
   Tile H2 = new H();
   bagged.add(H2);
-  Tile H3 = new H3();
+  Tile H3 = new H();
   bagged.add(H3);
   Tile I1 = new I();
   bagged.add(I1);
@@ -184,24 +185,17 @@ class Bag{
   bagged.add(U3);
   Tile U4 = new U();
   bagged.add(U4);
-  Tile U1 = new U();
-  bagged.add(U1);
+  Tile U5 = new U();
+  bagged.add(U5);
   
  
 
-  
-
-Bag(){
+ 
 }
 
 Tile take(){
   int num = (int)(Math.random() * bagged.size());
   return bagged.remove(num);
 }
-  
-  
-  
-  
-=======
->>>>>>> c58d24a9031aeb7d6fc23ec85c8b7949d0f1dc10
+
 }

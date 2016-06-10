@@ -1,7 +1,7 @@
 class Hand{
-  private ArrayList hand = new ArrayList<Tile>();
+  private ArrayList<Tile> hand = new ArrayList<Tile>();
   
-  public Hand(bag b){
+  public Hand(Bag b){
     fillHand(b);
   }
   public void fillHand(Bag b){

@@ -31,132 +31,132 @@ class Tile extends BoardSpace{
   }
 }
 //end tile
-A extends Tile{
+class A extends Tile{
   String let = "A";
   int val = 1;
   PImage img = loadImage("A.jpg");
 }
-B extends Tile{
+class B extends Tile{
   String let = "B";
   int val = 3;
   PImage img = loadImage("B.jpg");
 }
-C extends Tile{
+class C extends Tile{
   String let = "C";
   int val = 3;
   PImage img = loadImage("C.jpg");
 }
-D extends Tile{
+class D extends Tile{
   String let = "D";
   int val = 2;
   PImage img = loadImage("D.jpg");
 }
-E extends Tile{
+class E extends Tile{
   String let = "E";
   int val = 1;
   PImage img = loadImage("E.jpg");
 }
-F extends Tile{
+class F extends Tile{
   String let = "F";
   int val = 4;
   PImage img = loadImage("F.jpg");
 }
-G extends Tile{
+class G extends Tile{
   String let = "G";
   int val = 2;
   PImage img = loadImage("G.jpg");
 }
-H extends Tile{
+class H extends Tile{
   String let ="H";
   int val = 4;
   PImage img = loadImage("H.jpg");
 }
-I extends Tile{
+class I extends Tile{
   String let = "I";
   int val = 1;
   PImage img= loadImage("I.jpg");
 }
-J extends Tile{
+class J extends Tile{
   String letV ="J";
   int val = 8;
   PImage img = loadImage("J.jpg");
 }
-K extends Tile{
+class K extends Tile{
   String let = "K";
   int val = 5;
   PImage img = loadImage("K.jpg");
 }
-L extends Tile{
+class L extends Tile{
   String let = "L";
   int val = 1;
   PImage img = loadImage("L.jpg");
 }
-M extends Tile{
+class M extends Tile{
   String let = "M";
   int val = 3;
   PImage img = loadImage("M.jpg");
 }
-N extends Tile{
+class N extends Tile{
   String let = "N";
   int val = 1;
   PImage img = loadImage("N.jpg");
 }
-O extends Tile{
+class O extends Tile{
   String let = "O";
   int val = 1;
   PImage img = loadImage("O.jpg");
 }
-P extends Tile{
+class P extends Tile{
   String let  = "P";
   int val = 3;
   PImage img = loadImage("P.jpg");
 }
-Q extends Tile{
+class Q extends Tile{
   String let = "Q";
   int val= 10;
   PImage img = loadImage("Q.jpg");
 }
-R extends Tile{
+class R extends Tile{
   String let ="R";
   int val = 1;
   PImage img = loadImage("R.jpg");
 }
-S extends Tile{
+class S extends Tile{
   String let = "S";
   int val = 1;
   PImage img = loadImage("S.jpg");
 }
-T extends Tile{
+class T extends Tile{
   String let = "T";
   int val = 1;
   PImage img = loadImage("T.jpg");
 }
-U extends Tile{
+class U extends Tile{
   String let = "U";
   int val = 1;
   PImage img = loadImage("U.jpg");
 }
-V extends Tile{
+class V extends Tile{
   String let = "V";
   int val = 4;
   PImage img = loadImage("V.jpg");
 }
-W extends Tile{
+class W extends Tile{
   String let = "W";
   int val = 4;
   PImage img = loadImage("W.jpg");
 }
-X extends Tile{
+class X extends Tile{
   String let = "X";
   int val = 8;
-  PImage img = loadImage("X.jpg");
+   PImage img = loadImage("X.jpg");
 }
-Y extends Tile{
+class Y extends Tile{
   String let = "Y";
   int val = 4;
   PImage img = loadImage("Y.jpg");
 }
-Z extends Tile{
+class Z extends Tile{
   String let = "Z";
   int val = 10;
   PImage img = loadImage("Z.jpg");

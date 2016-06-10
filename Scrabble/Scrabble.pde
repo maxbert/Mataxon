@@ -3,5 +3,6 @@ void setup(){
 }
 void draw(){
   Bag b = new Bag();
-  Image =(b.take().getImg(),Math.random() * 800, Math.random() * 800, 40,40);
+  PImage img = b.take().getImg();
+  image(img,(float)(Math.random() * 800), (float)(Math.random() * 800), 40.0,40.0);
 }
