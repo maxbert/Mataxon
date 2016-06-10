@@ -4,6 +4,14 @@
  / /_/ /  __/ |/ / /___/ /_/ / /_/ / 
 /_____/\___/|___/_____/\____/\__, /  
                             /____/  
+                            
+                            
+                            
+6-9-16
+
+We began to put things together, but i keep getting this persisent bug with image loading. Work needs to be done, and we are unable to keep up wiht our plan. Hopefully the weekend will yield good results. All bugs are squashed right now, and all object classes done. Just the driver is left to write. Then of course the primitive AI. Its gonna be a long sunday night.
+
+Max
 
 ______________________________________________________    
 6-5-16
