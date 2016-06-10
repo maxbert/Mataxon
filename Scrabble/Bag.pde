@@ -1,7 +1,8 @@
 class Bag{
     ArrayList<Tile> bagged = new ArrayList<Tile>();
-   Bag(){
-
+    
+Bag(){
+  bagged.add(new A());
   Tile A1 = new A();
   bagged.add(A1);
   Tile A2 = new A();
@@ -194,7 +195,7 @@ class Bag{
 }
 
 Tile take(){
-  int num = (int)(Math.random() * bagged.size());
+  int num = (int)(0);
   return bagged.remove(num);
 }
 

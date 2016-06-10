@@ -1,3 +1,5 @@
+
+
 class Tile extends BoardSpace{
   String let;
   int val;
@@ -54,22 +56,22 @@ class D extends Tile{
 class E extends Tile{
   String let = "E";
   int val = 1;
-  PImage img = loadImage("E.jpg");
+ PImage img = loadImage("E.jpg");
 }
 class F extends Tile{
   String let = "F";
   int val = 4;
-  PImage img = loadImage("F.jpg");
+ PImage img = loadImage("F.jpg");
 }
 class G extends Tile{
   String let = "G";
   int val = 2;
-  PImage img = loadImage("G.jpg");
+ PImage img = loadImage("G.jpg");
 }
 class H extends Tile{
   String let ="H";
   int val = 4;
-  PImage img = loadImage("H.jpg");
+ PImage img = loadImage("H.jpg");
 }
 class I extends Tile{
   String let = "I";
@@ -89,7 +91,7 @@ class K extends Tile{
 class L extends Tile{
   String let = "L";
   int val = 1;
-  PImage img = loadImage("L.jpg");
+ PImage img = loadImage("L.jpg");
 }
 class M extends Tile{
   String let = "M";
@@ -99,7 +101,7 @@ class M extends Tile{
 class N extends Tile{
   String let = "N";
   int val = 1;
-  PImage img = loadImage("N.jpg");
+ PImage img = loadImage("N.jpg");
 }
 class O extends Tile{
   String let = "O";
@@ -109,7 +111,7 @@ class O extends Tile{
 class P extends Tile{
   String let  = "P";
   int val = 3;
-  PImage img = loadImage("P.jpg");
+ PImage img = loadImage("P.jpg");
 }
 class Q extends Tile{
   String let = "Q";
@@ -149,7 +151,7 @@ class W extends Tile{
 class X extends Tile{
   String let = "X";
   int val = 8;
-   PImage img = loadImage("X.jpg");
+  PImage img = loadImage("X.jpg");
 }
 class Y extends Tile{
   String let = "Y";
