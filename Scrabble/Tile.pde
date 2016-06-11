@@ -35,9 +35,9 @@ class Tile extends BoardSpace{
 }
 //end tile
 class A extends Tile{
-  String let = "B";
-  int val = 3;
-  PImage img = loadImage("B.jpg");
+  String let = "a";
+  int val = 1;
+  PImage img = loadImage("A.jpg");
 }
 
 class B extends Tile{
