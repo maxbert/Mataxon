@@ -15,4 +15,16 @@ if(!b.isEmpty()){
   let = b.take().getLet();
   //32
 }
+
+
+}//end draw
+int[] spot(float x, float y){
+ int[] spots = new int[2] ;
+ int xcor = (int)(x);
+ int ycor = (int)(y);
+ spots[1] = xcor/40;
+ spots[2] = ycor/40;
+ return spots;
+}
+  
 }
