@@ -7,6 +7,7 @@ class Tile extends BoardSpace{
   public Tile(){
     val = 0;
     let = "";
+    
   }
   public Tile(String letter, int value, PImage i){
     val = value;
@@ -34,10 +35,11 @@ class Tile extends BoardSpace{
 }
 //end tile
 class A extends Tile{
-  String let = "A";
-  int val = 1;
-  PImage img = loadImage("A.jpg");
+  String let = "B";
+  int val = 3;
+  PImage img = loadImage("B.jpg");
 }
+
 class B extends Tile{
   String let = "B";
   int val = 3;
