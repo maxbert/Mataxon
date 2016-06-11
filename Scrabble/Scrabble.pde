@@ -9,7 +9,7 @@ void setup(){
 }
 void draw(){
 if(!b.isEmpty()){
-  println(b.size());
+  println(b.getSize());
   print(let);
   image(loadImage(let + ".jpg"),(40 * (int)(Math.random() * 20)), (40 * (int)(Math.random() * 20)), 40.0,40.0);
   let = b.take().getLet();

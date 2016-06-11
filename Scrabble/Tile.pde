@@ -1,5 +1,4 @@
 
-
 class Tile extends BoardSpace{
   String let;
   int val;
@@ -25,14 +24,15 @@ class Tile extends BoardSpace{
   }
   public void setLet(String l){
      let = l;
-  }  
+  }
+  }
+
   /*public PImage getImg(){
     return img;
   }
   public void setImg(PImage a){
      img = a;
   }*/
-}
 //end tile
 class A extends Tile{
   String let = "A";
