@@ -7,7 +7,8 @@ class Player{
   public void draw(Bag b){
     hand.fillHand(b);}
   public void altScore (int i){
-    score += i;}
+    score += i;
+  }
    
    
 }
