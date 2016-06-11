@@ -6,5 +6,6 @@ void setup(){
 
 }
 void draw(){
-  image(loadImage("A.jpg"),(40 * (int)(Math.random() * 15)), (40 * (int)(Math.random() * 15)), 40.0,40.0);
+  String let = b.take().getLet();
+  image(loadImage(let + ".jpg"),(40 * (int)(Math.random() * 20)), (40 * (int)(Math.random() * 20)), 40.0,40.0);
 }

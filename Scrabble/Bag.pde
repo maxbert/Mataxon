@@ -195,7 +195,7 @@ Bag(){
 }
 
 Tile take(){
-  int num = (int)(0);
+  int num = (int)(Math.random()*bagged.size());
   return bagged.remove(num);
 }
 
