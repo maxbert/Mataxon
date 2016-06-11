@@ -1,18 +1,15 @@
 /* @pjs preload = "A.jpg"; */  
-import java.utils.*;
-Bag b = new Bag();
-String[] stuff = loadStrings("words.txt");
-String[] dict = split(stuff[0],',');
-ArrayList<String> dictionary = new ArrayList<String>();
-for(int i = 0; i < dict.size; i++){
-  dictionary.add(dict[i]);
-}
+import java.util.*;
+String[] stuff = {""}; 
+String[] dict = {""};
 Bag b = new Bag();
 String let = b.take().getLet();
 void setup(){
   size(800,800);
   loadImage("A.jpg");
   frameRate(10);
+  stuff =loadStrings("words.txt");
+  dict = split(stuff[0],',');
 
 }
 void draw(){
@@ -66,7 +63,13 @@ String copy(int[] first, int[] last, BoardSpace[][] board){
 }
 
 public boolean  checkWord(String x){
-    return (dict.contains(x));
+    for(int i =0; i< dict.length; i++){
+      if(dict[i].equals(x)){
+        return true;
+      }
+    }
+    return false;
+}
     
-  }
+
   
