@@ -1,4 +1,12 @@
 /* @pjs preload = "A.jpg"; */  
+import java.utils.*;
+Bag b = new Bag();
+String[] stuff = loadStrings("words.txt");
+String[] dict = split(stuff[0],',');
+ArrayList<String> dictionary = new ArrayList<String>();
+for(int i = 0; i < dict.size; i++){
+  dictionary.add(dict[i]);
+}
 Bag b = new Bag();
 String let = b.take().getLet();
 void setup(){
@@ -56,4 +64,9 @@ String copy(int[] first, int[] last, BoardSpace[][] board){
   }//end else
   return retStr;
 }
+
+public boolean  checkWord(String x){
+    return (dict.contains(x));
+    
+  }
   
