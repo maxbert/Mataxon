@@ -1,12 +1,12 @@
 class Player{
   Hand hand;
   int score;
-  Player(){
-    hand = new Hand();
-    score = 0;
-  public draw(Bag b){
+  Player(Bag b){
+    hand = new Hand(b);
+    score = 0;}
+  public void draw(Bag b){
     hand.fillHand(b);}
-  public altScore (int i){
+  public void altScore (int i){
     score += i;}
    
    
