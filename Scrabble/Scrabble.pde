@@ -62,6 +62,13 @@ public boolean  checkWord(String x){
     }
     return false;
 }
-    
+int[] click(){
+  int[] spot = new int[2];
+  if(mousePressed){
+    spot[1] = mouseX;
+    spot[1] = mouseX;
+  }
+  return spot;
+}
 
   
