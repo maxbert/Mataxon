@@ -99,6 +99,42 @@ import java.util.*;
      
    }
    
+   int calcScore(){
+     int retscore;
+     ArrayList<Integer> x = new ArrayList<Integer>();
+     ArrayList<Integer> y = new ArrayList<Integer>();
+     
+     int temp = x.size();
+     for (int i = 0; i < temp; i++){
+        if(getTile(x.get(i) -1, y.get(i)).getClass() == Tile.class){
+          int j = 1;
+          while(getTile(x.get(i) - j, y.get(i)).getClass() == Tile.class && x.get(i) - j >= 0){
+            retscore += getTile(x.get(i) -j, y.get(i)).getVal();
+            j++;
+        }
+        }if(getTile(x.get(i) + 1, y.get(i)).getClass() == Tile.class){
+          int j = 1;
+          while(getTile(x.get(i) + j, y.get(i)).getClass() == Tile.class && x.get(i) + j < 15){
+            retscore += getTile(x.get(i) + j, y.get(i)).getVal();
+            j++;
+          }
+        }
+        if(getTile(x.get(i), y.get(i) -1 ).getClass() == Tile.class){
+                 int j = 1;
+          while(getTile(x.get(i), y.get(i) -j).getClass() == Tile.class && y.get(i) -j >= 0){
+            retscore += getTile(x.get(i), y.get(i)-j).getVal();
+            j++;
+          }
+        }
+                }if(getTile(x.get(i), y.get(i)+1).getClass() == Tile.class){
+          int j = 1;
+          while(getTile(x.get(i), y.get(i)+j).getClass() == Tile.class && y.get(i) + j < 15){
+            retscore += getTile(x.get(i), y.get(i)+j).getVal();
+            j++;
+          }
+                }
+     }
+   
    
    void exchange(){
      

@@ -2,6 +2,10 @@ class BoardSpace{
   String getLet(){
     return "Error";
   }
+  
+  int getVal(){
+    return 0;
+  }
 }
 
 
