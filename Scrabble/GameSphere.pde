@@ -108,6 +108,7 @@ import java.util.*;
      ArrayList<Integer> Checkedy = new ArrayList<Integer>();
      for(int i =0; i < playedX.size(); i++){
        int xcor = playedX.get(i); int ycor = playedY.get(i);
+       if(!Checkedy.contains(playedY.get(i))){
        if(xcor != 0 && ycor != 0 && getTile(xcor -1,ycor).getLet().length() == 1){
          int j =1;
          while(getTile(xcor -j, ycor).getLet().length() == 1){
@@ -125,7 +126,8 @@ import java.util.*;
            Checkedx.add(xcor +j);
            Checkedy.add(ycor);
          }
-       }
+       }}
+       if(!Checkedx.contains(playedX.get(i))){
               if(xcor != 0 && ycor != 0 && getTile(xcor,ycor-1).getLet().length() == 1){
          int j =1;
          while(getTile(xcor, ycor-j).getLet().length() == 1){
@@ -145,8 +147,11 @@ import java.util.*;
          }
        }
      }
+     Checkedx.add(playedX.get(i));
+     Checkedy.add(playedY.get(i));
+     }
      return ret;
-  }
+   }
          
      
      
