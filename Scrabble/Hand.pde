@@ -9,7 +9,7 @@ class Hand{
     return _hand.size();}
   
   public void fillHand(Bag b){
-    while (_hand.size() < 8){
+    while (_hand.size() < 7){
       _hand.add(b.take());}}
       
   public Tile give(int n){

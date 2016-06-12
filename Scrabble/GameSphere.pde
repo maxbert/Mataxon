@@ -121,15 +121,16 @@ import java.util.*;
    }
    
      void undo(ArrayList<Integer> x, ArrayList<Integer> y){
+       int temp = x.size();
        if (turn == 1){
-         for(int i =0; i < x.size(); i++){
+         for(int i =0; i < temp; i++){
            _player1.hand.take((Tile)getTile(x.get(0), y.get(0)));
            _board.setTile(new BlankSpace(), x.get(0),y.get(0));
          x.remove(0); y.remove(0);}
          } 
        
        else{
-         for (int i =0; i < x.size(); i++){
+         for (int i =0; i < temp; i++){
    _player2.hand.take((Tile)getTile(x.get(0), y.get(0)));
            _board.setTile(new BlankSpace(), x.get(0),y.get(0));
          x.remove(0); y.remove(0);}      

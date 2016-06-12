@@ -25,11 +25,11 @@ void draw(){
       image(loadImage(game.boardGetLet(i,j) + ".jpg"),(40 * i ), (40 * j), 40.0,40.0);
   }}
   if(game.getTurn() == 1){
-  for (int i = 0; i < game.p1GetHandSize() -1; i ++){
+  for (int i = 0; i < game.p1GetHandSize(); i ++){
       image(loadImage(game.p1GetLet(i) + ".jpg"), (130 + (i * 50)) , (640), 40.0, 40.0);}
   }
     else{
-      for (int i = 0; i < game.p2GetHandSize() -1; i ++){
+      for (int i = 0; i < game.p2GetHandSize(); i ++){
     image(loadImage(game.p2GetLet(i) + ".jpg"), (130 + (i * 50)) , (640), 40.0, 40.0);}
     }
   
