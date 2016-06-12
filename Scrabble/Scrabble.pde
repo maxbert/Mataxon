@@ -54,7 +54,7 @@ void mousePressed(){
       }
   }
     if(mouseX > 650 && mouseX < 750 && mouseY > 100 && mouseY < 150){
-      //exchange
+      game.exchange();
     }
     if(mouseX > 675 && mouseX < 725 && mouseY > 175 && mouseY < 225){
       //undo
