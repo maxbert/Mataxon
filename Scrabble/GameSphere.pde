@@ -4,7 +4,7 @@ import java.util.*;
  
   //turn is either 1 for 1st player or 2 for 2nd player
   int turn = 1;
-
+ ArrayList<Integer>  playedX = new ArrayList<Integer>();ArrayList<Integer>  playedY = new ArrayList<Integer>();
   Board _board = new Board();
   Bag _bag = new Bag();
   Player _player1 = new Player(_bag);
@@ -16,6 +16,12 @@ import java.util.*;
       turn = x;
     }
     
+    int p1GetHandSize(){
+      return _player1.hand.size();
+    }
+        int p2GetHandSize(){
+      return _player2.hand.size();
+    }
       Tile p1GetTile(int i){
        return _player1.getTile(i)
       ;}
@@ -74,9 +80,14 @@ import java.util.*;
      
      if(game.getTurn() == 1){
        game.setTurn(2);
+       playedX = new ArrayList<Integer>();
+       playedY = new ArrayList<Integer>();
+       
      }
      else{
        game.setTurn(1);
+        playedX = new ArrayList<Integer>();
+       playedY = new ArrayList<Integer>();
      }
      
    }
@@ -88,30 +99,39 @@ import java.util.*;
        while(i < 7){
        Tile temp = _player1.hand.give(0);
        _bag.accept(temp);
-     i++;}}
+     i++;}
+     _player1.draw(_bag);}
      else{
        int i = 0;
        while(i < 7){
-       Tile temp = _player1.hand.give(0);
+       Tile temp = _player2.hand.give(0);
        _bag.accept(temp);
-     i++;}}
+     i++;}
+   _player2.draw(_bag);}
    }
    
-   void undo(int[][] a){
-     if (turn == 1){
-       for (int[] i : a){
-         _player1.hand.take((Tile)getTile(i[0],i[1]));
-         _board.setTile(new BlankSpace(), i[0],i[1]);}
-       } 
+   void undo(){
      
-     else{
-       for (int[] i : a){
-         _player2.hand.take((Tile)getTile(i[0],i[1]));
-         _board.setTile(new BlankSpace(), i[0],i[1]);}      
-     }
+     undo(playedX,playedY);
    }
-     
+   
+     void undo(ArrayList<Integer> x, ArrayList<Integer> y){
+       if (turn == 1){
+         for(int i =0; i < x.size(); i++){
+           _player1.hand.take((Tile)getTile(x.get(0), y.get(0)));
+           _board.setTile(new BlankSpace(), x.get(0),y.get(0));
+         x.remove(0); y.remove(0);}
+         } 
        
+       else{
+         for (int i =0; i < x.size(); i++){
+   _player2.hand.take((Tile)getTile(x.get(0), y.get(0)));
+           _board.setTile(new BlankSpace(), x.get(0),y.get(0));
+         x.remove(0); y.remove(0);}      
+       }
+     }
+       
+         
      
   
   

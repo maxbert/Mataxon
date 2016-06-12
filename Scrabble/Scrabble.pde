@@ -20,12 +20,15 @@ void draw(){
     for(int j = 0; j < 15; j++){
       image(loadImage(game.boardGetLet(i,j) + ".jpg"),(40 * i ), (40 * j), 40.0,40.0);
   }}
-  for (int i = 0; i < 7; i ++){
-    if (game.getTurn() == 1){
+  if(game.getTurn() == 1){
+  for (int i = 0; i < game.p1GetHandSize() -1; i ++){
       image(loadImage(game.p1GetLet(i) + ".jpg"), (130 + (i * 50)) , (640), 40.0, 40.0);}
-    else{
-    image(loadImage(game.p2GetLet(i) + ".jpg"), (130 + (i * 50)) , (640), 40.0, 40.0);}
   }
+    else{
+      for (int i = 0; i < game.p2GetHandSize() -1; i ++){
+    image(loadImage(game.p2GetLet(i) + ".jpg"), (130 + (i * 50)) , (640), 40.0, 40.0);}
+    }
+  
   //if(mousePressed && game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
   //  int[] coords = game.spot(mouseX, mouseY);
   //    println("" + coords[0] + coords[1]);
@@ -43,21 +46,25 @@ void mousePressed(){
     if(isSelected){
     int[] coords = game.spot(mouseX, mouseY);
       game._board.setTile(given,coords[0],coords[1]);
+      game.playedX.add(coords[0]); game.playedY.add(coords[1]);
+    
   }
   }
   if(game.handSpot(mouseX,mouseY) > -1){
     isSelected = true;
     if (game.getTurn() == 1){
       given = game.p1GetTile(game.handSpot(mouseX,mouseY));
+      game._player1.hand.give(game.handSpot(mouseX,mouseY));
     }else{
         given = game.p2GetTile(game.handSpot(mouseX,mouseY));
+        game._player2.hand.give(game.handSpot(mouseX,mouseY));
       }
   }
     if(mouseX > 650 && mouseX < 750 && mouseY > 100 && mouseY < 150){
       game.exchange();
     }
     if(mouseX > 675 && mouseX < 725 && mouseY > 175 && mouseY < 225){
-      //undo
+      game.undo();
     }
     if(mouseX > 650 && mouseX < 750 && mouseY > 350 && mouseY < 400){
       game.endTurn();
