@@ -84,13 +84,17 @@ import java.util.*;
    
    void exchange(){
      if (turn == 1){
-       for (int i = 0; i <7; i++){
+       for (int i = _player1.hand.size(); i > -1 ; i--){
        Tile temp = _player1.hand.give(i);
-       _bag.accept(temp);}}
+       _bag.accept(temp);
+       _player1.draw(_bag)  ;
+   }}
      if (turn == 2){
-       for (int i = 0; i <7; i++){
-       Tile temp = _player1.hand.give(i);
-       _bag.accept(temp);}}
+       for (int i = _player1.hand.size(); i > -1; i--){
+       Tile temp = _player2.hand.give(i);
+       _bag.accept(temp);
+       _player2.draw(_bag)  ;
+   }}
    }
    
    void undo(int[][] a){

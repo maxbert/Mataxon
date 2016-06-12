@@ -4,6 +4,10 @@ class Hand{
   public Hand(Bag b){
     fillHand(b);
   }
+  
+  int size(){
+    return hand.size();}
+  
   public void fillHand(Bag b){
     while (hand.size() < 8){
       hand.add(b.take());}}
