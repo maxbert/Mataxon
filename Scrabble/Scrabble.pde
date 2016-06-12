@@ -13,6 +13,7 @@ void setup(){
   split(stuff[0],',');
   image(loadImage("Exchange.jpg"),650.0,100.0,100,50);
   image(loadImage("EndTurn.jpg"),650.0,350.0,100,50);
+  image(loadImage("Undo.jpg"),675.0,175.0,50,50);
 }
 void draw(){
   for(int i = 0; i < 15; i ++){
@@ -55,8 +56,11 @@ void mousePressed(){
     if(mouseX > 650 && mouseX < 750 && mouseY > 100 && mouseY < 150){
       //exchange
     }
+    if(mouseX > 675 && mouseX < 725 && mouseY > 175 && mouseY < 225){
+      //undo
+    }
     if(mouseX > 650 && mouseX < 750 && mouseY > 350 && mouseY < 400){
-      //end turn
+      game.endTurn();
     }
 }
 
