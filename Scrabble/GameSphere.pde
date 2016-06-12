@@ -104,36 +104,45 @@ import java.util.*;
      ArrayList<Integer> x = new ArrayList<Integer>();
      ArrayList<Integer> y = new ArrayList<Integer>();
      
-     int temp = x.size();
+     int temp = playedX.size();
      for (int i = 0; i < temp; i++){
-        if(getTile(x.get(i) -1, y.get(i)).getClass() == Tile.class){
+        if(!y.contains(playedY.get(i)){
+        if(getTile(playedX.get(i) -1, playedY.get(i)).getClass() == Tile.class){
           int j = 1;
-          while(getTile(x.get(i) - j, y.get(i)).getClass() == Tile.class && x.get(i) - j >= 0){
-            retscore += getTile(x.get(i) -j, y.get(i)).getVal();
-            j++;
-        }
-        }if(getTile(x.get(i) + 1, y.get(i)).getClass() == Tile.class){
-          int j = 1;
-          while(getTile(x.get(i) + j, y.get(i)).getClass() == Tile.class && x.get(i) + j < 15){
-            retscore += getTile(x.get(i) + j, y.get(i)).getVal();
+          while(getTile(playedX.get(i) - j, playedY.get(i)).getClass() == Tile.class && playedX.get(i) - j >= 0){
+            retscore += getTile(playedX.get(i) -j, playedY.get(i)).getVal();
             j++;
           }
         }
-        if(getTile(x.get(i), y.get(i) -1 ).getClass() == Tile.class){
+        if(getTile(playedX.get(i) + 1, playedY.get(i)).getClass() == Tile.class){
+          int j = 1;
+          while(getTile(playedX.get(i) + j, playedY.get(i)).getClass() == Tile.class && playedX.get(i) + j < 15){
+            retscore += getTile(playedX.get(i) + j, playedY.get(i)).getVal();
+            j++;
+          }
+        }
+      }
+        if(!x.contains(playedX.get(i))
+        if(getTile(x.get(i), playedY.get(i) -1 ).getClass() == Tile.class){
                  int j = 1;
-          while(getTile(x.get(i), y.get(i) -j).getClass() == Tile.class && y.get(i) -j >= 0){
-            retscore += getTile(x.get(i), y.get(i)-j).getVal();
+          while(getTile(playedX.get(i), playedY.get(i) -j).getClass() == Tile.class && playedY.get(i) -j >= 0){
+            retscore += getTile(playedX.get(i), playedY.get(i)-j).getVal();
             j++;
           }
         }
-                }if(getTile(x.get(i), y.get(i)+1).getClass() == Tile.class){
+          if(getTile(playedX.get(i), playedY.get(i)+1).getClass() == Tile.class){
           int j = 1;
-          while(getTile(x.get(i), y.get(i)+j).getClass() == Tile.class && y.get(i) + j < 15){
-            retscore += getTile(x.get(i), y.get(i)+j).getVal();
+          while(getTile(playedX.get(i), playedY.get(i)+j).getClass() == Tile.class && playedY.get(i) + j < 15){
+            retscore += getTile(playedX.get(i), playedY.get(i)+j).getVal();
             j++;
           }
-                }
-     }
+          }
+       x.add(playedX.get(i));
+       y.add(playedY.get(i));
+       
+   }
+   return retscore;
+ }
    
    
    void exchange(){
