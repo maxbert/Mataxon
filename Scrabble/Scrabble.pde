@@ -52,7 +52,14 @@ void mousePressed(){
         given = game.p2GetTile(game.handSpot(mouseX,mouseY));
       }
   }
+    if(mouseX > 650 && mouseX < 750 && mouseY > 100 && mouseY < 150){
+      //exchange
+    }
+    if(mouseX > 650 && mouseX < 750 && mouseY > 350 && mouseY < 400){
+      //end turn
+    }
 }
+
 
 
 String copy(int[] first, int[] last, BoardSpace[][] board){  
