@@ -477,3 +477,21 @@ class Z extends Tile{
   }  
 //  PImage img = loadImage("Z.jpg");
 }
+
+
+class Blarg extends Tile{
+    String let = "BlankSpace";
+  int val = 10;
+    public int getVal(){
+    return val;
+  }
+  public String getLet(){
+    return let;
+  }
+  public void setVal(int a){
+     val = a;
+  }
+  public void setLet(String l){
+     let = l;
+  }  
+}

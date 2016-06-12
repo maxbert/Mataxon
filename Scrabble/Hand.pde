@@ -16,11 +16,12 @@ class Hand{
       return hand.remove(n);}
       
   public Tile see(int n){
+    if(n >= size()){
+      return new Blarg();
+    }
       return hand.get(n);}
       
    public void take(Tile t){
      hand.add(t);}
 }
-          
-  
   
