@@ -162,6 +162,8 @@ import java.util.*;
      Checkedx.add(playedX.get(i));
      Checkedy.add(playedY.get(i));
      }
+     
+     
      return ret;
    }
          
