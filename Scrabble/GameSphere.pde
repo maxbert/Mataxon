@@ -1,7 +1,10 @@
-class GameSphere{
+
+  
+  class GameSphere{
   
   //turn is either 1 for 1st player or 2 for 2nd player
   int turn = 1;
+
   
   Board _board = new Board();
   Bag _bag = new Bag();
@@ -32,8 +35,13 @@ int[] spot(float x, float y){
  return spots;
 }
 
+int handSpot(float x, float y){
+ int xcor = (int)(x - 130);
+ int ycor = (int)(y - 640);
+ if (ycor <= 40 && ycor >= 0){
+   return xcor/50;}
+ return -1;}
+ 
+
 
 }
-
-  
-  

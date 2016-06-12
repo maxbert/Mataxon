@@ -27,14 +27,9 @@ void draw(){
     int[] coords = game.spot(mouseX, mouseY);
       println("" + coords[0] + coords[1]);
   }
-  if(mousePressed && (mouseX > 650 && mouseX < 750) && (mouseY > 100 && mouseY < 150)){
-    //exchange call made
-    
-  }
-  if(mousePressed && (mouseX > 650 && mouseX < 750) && (mouseY > 250 && mouseY < 300)){
-    //end turn call made
-    
-  }
+  if(mousePressed && game.handSpot(mouseX,mouseY) > -1){
+    println("" + game.handSpot(mouseX,mouseY));}  
+  
   
     
       
