@@ -7,7 +7,7 @@ class Checker{
   
   int checkDir(int x1, int x2, int y1, int y2){
     int dir = -1;//1 = vertical, 0 = horizontal;
-    if(x1 == x2)
+    if(x1 == x2){
       dir = 1;
     }
     else if(y1 ==y2){
