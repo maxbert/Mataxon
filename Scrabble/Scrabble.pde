@@ -11,13 +11,15 @@ void setup(){
   f = createFont("Aller_Rg.ttf", 32, true);
   size(800,800);
   frameRate(1600);
-  loadStrings("words.txt");
-  split(stuff[0],',');
+  stuff =loadStrings("words.txt");
+  dict = split(stuff[0],'\n');
   image(loadImage("Exchange.jpg"),650.0,100.0,100,50);
   image(loadImage("EndTurn.jpg"),650.0,350.0,100,50);
   image(loadImage("Undo.jpg"),675.0,175.0,50,50);
 }
+int i =0;
 void draw(){
+  i++;
   PFont f;  
   f = createFont("Aller_Rg.ttf", 32, true);
   image(loadImage("gray.jpg"),0,0,800.0,800.0);
@@ -76,7 +78,7 @@ void draw(){
   text("Player 2:" + game._player2.score, 650, 720);
   
   
-    
+    println(dict[i]);
       
 }//end draw
 
