@@ -7,12 +7,13 @@ class Checker{
   
   int checkDir(int x1, int x2, int y1, int y2){
     int dir = -1;//1 = vertical, 0 = horizontal;
-    if(x1 == x2){
+    if(x1 == x2)
       dir = 1;
     }
-    else{
-      dir = 2;
+    else if(y1 ==y2){
+      dir = 0;
     }
+    
     return dir;
   }
 boolean wordDir(ArrayList<Integer> x, ArrayList<Integer> y){
@@ -26,13 +27,16 @@ boolean wordDir(ArrayList<Integer> x, ArrayList<Integer> y){
          }
       }
     }
-    else{
+    else if(dir == 1){
       for(int a = 0; a < y.size(); a++){
           if(y.get(a) != y.get(a+1)){
             bool = false;
             break;
         }
       }
+    }
+    if(dir != 1 && dir != 0){
+      bool = false;
     }
     return bool;
   }//end wordir
