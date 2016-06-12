@@ -73,6 +73,19 @@ import java.util.*;
      }
      
    }
+   
+   void undo(ArrayList a){
+     if (turn == 1){
+       for (int[] i : a){
+         _player1.hand.takeTile(getTile(i[0],i[1]));}}
+     else{
+       for (int[] i : a){
+         _player1.hand.takeTile(getTile(i[0],i[1]));}      
+     }
+   }
+     
+       
+     
   
   
   }//end class

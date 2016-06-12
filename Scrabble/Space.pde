@@ -57,7 +57,7 @@ class StarSpace extends Space{
   boolean playable = true;
   boolean wholeWord = true;
     String getLet(){
-   return "Star";
+   return "star";
   }
 }
 
