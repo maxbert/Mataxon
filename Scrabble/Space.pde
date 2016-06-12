@@ -44,6 +44,12 @@ class TripleWord extends Space{
   boolean wholeWord = true;
   PImage img = loadImage("TripleWord.jpg");
 }
+class StarSpace extends Space{
+    int modifier = 2;
+  boolean playable = true;
+  boolean wholeWord = true;
+  PImage img = loadImage("Star.jpg");
+}
 
 class DoubleWord extends Space{
     int modifier = 2;
