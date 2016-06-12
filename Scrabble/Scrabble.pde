@@ -78,7 +78,7 @@ void draw(){
   text("Player 2:" + game._player2.score, 650, 720);
   
   
-    println(dict[i]);
+    //println(dict[i]);
       
 }//end draw
 
