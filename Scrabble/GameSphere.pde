@@ -1,11 +1,10 @@
 import java.util.*;
  
   class GameSphere{
-  String[] stuff = loadStrings("words.txt");
-  String[] dict = split(stuff[0],',');
+ 
   //turn is either 1 for 1st player or 2 for 2nd player
   int turn = 1;
- 
+
   Board _board = new Board();
   Bag _bag = new Bag();
   Player _player1 = new Player(_bag);
@@ -16,6 +15,15 @@ import java.util.*;
   void setTurn(int x){
     turn = x;
   }
+  
+    Tile p1GetTile(int i){
+     return _player1.getTile(i)
+    ;}
+      Tile p2GetTile(int i){
+     return _player2.getTile(i)
+    ;}
+    
+    
    BoardSpace getTile(int x, int y){
     return _board.getTile(x,y);}
     
@@ -53,18 +61,18 @@ int handSpot(float x, float y){
  return -1;
  }
 
- void endTurn(){
-   checkWord();
-   calcScore();
+ //void endTurn(){
+ //  checkWord();
+ //  calcScore();
    
-   if(game.getTurn() = 1){
-     game.setTurn = 2;
-   }
-   else{
-     game.setTurn = 1;
-   }
+ //  if(game.getTurn() = 1){
+ //    game.setTurn = 2;
+ //  }
+ //  else{
+ //    game.setTurn = 1;
+ //  }
    
- }
+ //}
 
 
 }//end class
