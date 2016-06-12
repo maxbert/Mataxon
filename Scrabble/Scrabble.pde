@@ -7,6 +7,8 @@ boolean isSelected = false;
 Tile given = new A();
 
 void setup(){
+  PFont f;  
+  f = createFont("Aller_Rg.ttf", 32, true);
   size(800,800);
   frameRate(1600);
   loadStrings("words.txt");
@@ -16,6 +18,8 @@ void setup(){
   image(loadImage("Undo.jpg"),675.0,175.0,50,50);
 }
 void draw(){
+  PFont f;  
+  f = createFont("Aller_Rg.ttf", 32, true);
   image(loadImage("gray.jpg"),0,0,800.0,800.0);
   fill(204, 102, 0);
   rect(128, 638, 43, 43);
@@ -25,6 +29,7 @@ void draw(){
   rect(328, 638, 43, 43);
   rect(378, 638, 43, 43);
   rect(428, 638, 43, 43);
+  rect(640, 620, 130, 130);//score
   //for(int a = 0;  a < 8; a ++){
   //  if(mousePressed){
   //    if(mouseY > 638 && mouseY < 681){
@@ -61,6 +66,14 @@ void draw(){
   //}
   //if(mousePressed && game.handSpot(mouseX,mouseY) > -1){
   //  println("" + game.handSpot(mouseX,mouseY));}  
+  //score
+  textFont(f, 30);
+  fill(0);
+  text("Score", 660, 650);
+  textFont(f, 18);
+  fill(0);
+  text("Player 1:", 650, 680);
+  text("Player 2:", 650, 720);
   
   
     
