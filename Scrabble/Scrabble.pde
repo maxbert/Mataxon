@@ -17,9 +17,9 @@ void draw(){
   }}
   for (int i = 0; i < 7; i ++){
     if (game.getTurn() == 1){
-      image(loadImage(game.p1GetLet(i) + ".jpg"), (180 + (i * 50)) , (640), 40.0, 40.0);}
+      image(loadImage(game.p1GetLet(i) + ".jpg"), (130 + (i * 50)) , (640), 40.0, 40.0);}
     else{
-    image(loadImage(game.p2GetLet(i) + ".jpg"), (180 + (i * 50)) , (640), 40.0, 40.0);}
+    image(loadImage(game.p2GetLet(i) + ".jpg"), (130 + (i * 50)) , (640), 40.0, 40.0);}
   }
   if(mousePressed && game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
     int[] coords = game.spot(mouseX, mouseY);
