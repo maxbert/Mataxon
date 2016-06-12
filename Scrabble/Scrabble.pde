@@ -10,7 +10,6 @@ void setup(){
   frameRate(10);
   stuff =loadStrings("words.txt");
   dict = split(stuff[0],',');
-
 }
 void draw(){
 if(!b.isEmpty()){
@@ -19,9 +18,7 @@ if(!b.isEmpty()){
   image(loadImage(let + ".jpg"),(40 * (int)(Math.random() * 20)), (40 * (int)(Math.random() * 20)), 40.0,40.0);
   let = b.take().getLet();
   //32
-}
-
-
+  }
 }//end draw
 int[] spot(float x, float y){
  int[] spots = new int[2] ;
@@ -44,9 +41,7 @@ String copy(int[] first, int[] last, BoardSpace[][] board){
     }
     for(int b = 0; b < tiles.length; b++){
       retStr += (tiles[b].getLet()); 
-    }
-    
-    
+    }  
   }//end if
   else{    //column
     Tile[] tiles = new Tile[xcor2 = xcor1];
@@ -55,13 +50,10 @@ String copy(int[] first, int[] last, BoardSpace[][] board){
     }
     for(int b = 0; b < tiles.length; b++){
       retStr += (tiles[b].getLet()); 
-    }
-    
-    
+    }   
   }//end else
   return retStr;
 }
-
 public boolean  checkWord(String x){
     for(int i =0; i< dict.length; i++){
       if(dict[i].equals(x)){
