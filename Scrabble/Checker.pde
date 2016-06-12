@@ -15,7 +15,7 @@ class Checker{
     }
     return dir;
   }
-  boolean wordDir(ArrayList<Integer> x, ArrayList<Integer> y){
+boolean wordDir(ArrayList<Integer> x, ArrayList<Integer> y){
     boolean bool = true;
     int dir = checkDir(x.get(0),x.get(1),y.get(0),y.get(1));
     if(dir == 0){//thus its going horizontal

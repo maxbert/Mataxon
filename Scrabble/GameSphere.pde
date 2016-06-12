@@ -82,6 +82,11 @@ import java.util.*;
    void endTurn(){
    //  checkWord();
       int nextTurn =1;
+      Checker c = new Checker();
+      if (c.wordDir(playedX,playedY)){
+        undo();
+        return;
+      }
      if(game.getTurn() == 1){
        game.setTurn(2);
        _player1.altScore(calcScore());
