@@ -1,7 +1,7 @@
 /* @pjs preload = "A.jpg"; */  
 import java.util.*;
  String[] stuff = {""};
-  String[] dict = {""};
+  String[] dict;
 GameSphere game = new GameSphere();
 boolean isSelected = false;
 Tile given = new A();
@@ -12,11 +12,12 @@ void setup(){
   size(800,800);
   frameRate(1600);
   stuff =loadStrings("words.txt");
-  dict = split(stuff[0],'\n');
+  dict = stuff[0].split("\n");
   image(loadImage("Exchange.jpg"),650.0,100.0,100,50);
   image(loadImage("EndTurn.jpg"),650.0,350.0,100,50);
   image(loadImage("Undo.jpg"),675.0,175.0,50,50);
 }
+
 int i =0;
 void draw(){
   i++;
@@ -78,7 +79,7 @@ void draw(){
   text("Player 2:" + game._player2.score, 650, 720);
   
   
-    //println(dict[i]);
+    //println(dict[1]);
       
 }//end draw
 
