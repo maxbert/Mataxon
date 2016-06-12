@@ -106,13 +106,14 @@ import java.util.*;
      int ret = 0;
      ArrayList<Integer> Checkedx = new ArrayList<Integer>();
      ArrayList<Integer> Checkedy = new ArrayList<Integer>();
-     ret += getTile(playedX.get(0),playedY.get(0)).getVal();
+     
      for(int i =0; i < playedX.size(); i++){
        int xcor = playedX.get(i); int ycor = playedY.get(i);
        
        if(!Checkedy.contains(playedY.get(i))){
        if(xcor != 0 && ycor != 0 && getTile(xcor -1,ycor).getLet().length() == 1){
          int j =1;
+         ret += getTile(playedX.get(0),playedY.get(0)).getVal();
          while(getTile(xcor -j, ycor).getLet().length() == 1){
            ret += getTile(xcor -j,ycor).getVal();
            j++;
@@ -122,6 +123,7 @@ import java.util.*;
        }
               if(xcor != 14 && ycor != 14 && getTile(xcor +1,ycor).getLet().length() == 1){
          int j =1;
+         ret += getTile(playedX.get(0),playedY.get(0)).getVal();
          while(getTile(xcor +j, ycor).getLet().length() == 1){
            ret += getTile(xcor +j,ycor).getVal();
            j++;
@@ -132,6 +134,7 @@ import java.util.*;
        if(!Checkedx.contains(playedX.get(i))){
               if(xcor != 0 && ycor != 0 && getTile(xcor,ycor-1).getLet().length() == 1){
          int j =1;
+         ret += getTile(playedX.get(0),playedY.get(0)).getVal();
          while(getTile(xcor, ycor-j).getLet().length() == 1){
            ret += getTile(xcor,ycor-j).getVal();
            j++;
@@ -141,6 +144,7 @@ import java.util.*;
        }
               if(xcor != 14 && ycor != 14 && getTile(xcor,ycor +1).getLet().length() == 1){
          int j =1;
+         ret += getTile(playedX.get(0),playedY.get(0)).getVal();
          while(getTile(xcor, ycor+j).getLet().length() == 1){
            ret += getTile(xcor,ycor+j).getVal();
            j++;
