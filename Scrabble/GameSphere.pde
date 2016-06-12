@@ -83,7 +83,7 @@ import java.util.*;
    //  checkWord();
       int nextTurn =1;
       Checker c = new Checker();
-      if (c.wordDir(playedX,playedY)){
+      if (!c.wordDir(playedX,playedY)){
         undo();
         return;
       }
