@@ -16,6 +16,10 @@ void setup(){
   image(loadImage("Undo.jpg"),675.0,175.0,50,50);
 }
 void draw(){
+  image(loadImage("gray.jpg"),0,0,800.0,800.0);
+  image(loadImage("Exchange.jpg"),650.0,100.0,100,50);
+  image(loadImage("EndTurn.jpg"),650.0,350.0,100,50);
+  image(loadImage("Undo.jpg"),675.0,175.0,50,50);
   for(int i = 0; i < 15; i ++){
     for(int j = 0; j < 15; j++){
       image(loadImage(game.boardGetLet(i,j) + ".jpg"),(40 * i ), (40 * j), 40.0,40.0);

@@ -1,27 +1,27 @@
 class Hand{
-  private ArrayList<Tile> hand = new ArrayList<Tile>();
+  private ArrayList<Tile> _hand = new ArrayList<Tile>();
   
   public Hand(Bag b){
     fillHand(b);
   }
   
   int size(){
-    return hand.size();}
+    return _hand.size();}
   
   public void fillHand(Bag b){
-    while (hand.size() < 8){
-      hand.add(b.take());}}
+    while (_hand.size() < 8){
+      _hand.add(b.take());}}
       
   public Tile give(int n){
-      return hand.remove(n);}
+      return _hand.remove(n);}
       
   public Tile see(int n){
     if(n >= size()){
       return new Blarg();
     }
-      return hand.get(n);}
+      return _hand.get(n);}
       
    public void take(Tile t){
-     hand.add(t);}
+     _hand.add(t);}
 }
   

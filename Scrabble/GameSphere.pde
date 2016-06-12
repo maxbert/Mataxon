@@ -4,18 +4,21 @@ import java.util.*;
  
   //turn is either 1 for 1st player or 2 for 2nd player
   int turn = 1;
- ArrayList<Integer>  playedX = new ArrayList<Integer>();ArrayList<Integer>  playedY = new ArrayList<Integer>();
+  ArrayList<Integer>  playedX = new ArrayList<Integer>();
+  ArrayList<Integer>  playedY = new ArrayList<Integer>();
   Board _board = new Board();
   Bag _bag = new Bag();
   Player _player1 = new Player(_bag);
   Player _player2 = new Player(_bag);
   
+  //TURN METHODS
   int getTurn(){
       return turn;}
-    void setTurn(int x){
+  void setTurn(int x){
       turn = x;
     }
-    
+  
+  //PLAYER METHODS
     int p1GetHandSize(){
       return _player1.hand.size();
     }
@@ -36,7 +39,9 @@ import java.util.*;
        void p2Draw(){
            _player2.draw(_bag);}
            
-      
+       
+           
+     //BOARD 
      BoardSpace getTile(int x, int y){
       return _board.getTile(x,y);}
       
