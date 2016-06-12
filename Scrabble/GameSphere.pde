@@ -106,8 +106,10 @@ import java.util.*;
      int ret = 0;
      ArrayList<Integer> Checkedx = new ArrayList<Integer>();
      ArrayList<Integer> Checkedy = new ArrayList<Integer>();
+     ret += getTile(playedX.get(0),playedY.get(0)).getVal();
      for(int i =0; i < playedX.size(); i++){
        int xcor = playedX.get(i); int ycor = playedY.get(i);
+       
        if(!Checkedy.contains(playedY.get(i))){
        if(xcor != 0 && ycor != 0 && getTile(xcor -1,ycor).getLet().length() == 1){
          int j =1;
@@ -153,53 +155,7 @@ import java.util.*;
      return ret;
    }
          
-     
-     
-   //int calcScore(){
-   //  int retscore =0;
-   //  ArrayList<Integer> x = new ArrayList<Integer>();
-   //  ArrayList<Integer> y = new ArrayList<Integer>();
-     
-   //  int temp = playedX.size();
-   //  for (int i = 0; i < temp; i++){
-   //     if(!y.contains(playedY.get(i))){
-   //     if(!getTile(playedX.get(i) -1, playedY.get(i)).getLet().equals("Error")){
-   //       int j = 1;
-   //       while(!getTile(playedX.get(i) - j, playedY.get(i)).getLet().equals("Error") && playedX.get(i) - j >= 0){
-   //         retscore += getTile(playedX.get(i) -j, playedY.get(i)).getVal();
-   //         j++;
-   //       }
-   //     }
-   //     if(!getTile(playedX.get(i) + 1, playedY.get(i)).getLet().equals("Error")){
-   //       int j = 1;
-   //       while(!getTile(playedX.get(i) + j, playedY.get(i)).getLet().equals("Error") && playedX.get(i) + j < 15){
-   //         retscore += getTile(playedX.get(i) + j, playedY.get(i)).getVal();
-   //         j++;
-   //       }
-   //     }
-   //   }
-   //     if(!x.contains(playedX.get(i))){
-   //     if(!getTile(playedX.get(i), playedY.get(i) -1 ).getLet().equals("Error")){
-   //              int j = 1;
-   //       while(!getTile(playedX.get(i), playedY.get(i) -j).getLet().equals("Error") && playedY.get(i) -j >= 0){
-   //         retscore += getTile(playedX.get(i), playedY.get(i)-j).getVal();
-   //         j++;
-   //       }
-   //     }
-   //       if(!getTile(playedX.get(i), playedY.get(i)+1).getLet().equals("Error")){
-   //       int j = 1;
-   //       while(!getTile(playedX.get(i), playedY.get(i)+j).getLet().equals("Error") && playedY.get(i) + j < 15){
-   //         retscore += getTile(playedX.get(i), playedY.get(i)+j).getVal();
-   //         j++;
-   //       }
-   //       }
-   //    x.add(playedX.get(i));
-   //    y.add(playedY.get(i));
-       
-   //}}
-   //return retscore;
- //}
-   
+
    
    void exchange(){
      
@@ -223,6 +179,18 @@ import java.util.*;
        _bag.accept(temp);
      i++;}
    _player2.draw(_bag);}
+
+      int nextTurn =1;
+     if(game.getTurn() == 1){
+       game.setTurn(2);
+       nextTurn = 2;
+       
+     }
+     else{
+       game.setTurn(1);
+       nextTurn =1;
+     }
+     showMessageDialog(null,"It's player " + nextTurn + "'s turn now!");
    }
    
    void undo(){
