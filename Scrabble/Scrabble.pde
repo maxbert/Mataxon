@@ -3,6 +3,8 @@ import java.util.*;
 String[] stuff = {""}; 
 String[] dict = {""};
 GameSphere game = new GameSphere();
+boolean isSelected = false;
+BoardSpace given = new A();
 
 void setup(){
   size(800,800);
@@ -23,19 +25,44 @@ void draw(){
     else{
     image(loadImage(game.p2GetLet(i) + ".jpg"), (130 + (i * 50)) , (640), 40.0, 40.0);}
   }
-  if(mousePressed && game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
-    int[] coords = game.spot(mouseX, mouseY);
-      println("" + coords[0] + coords[1]);
-  }
-  if(mousePressed && game.handSpot(mouseX,mouseY) > -1){
-    println("" + game.handSpot(mouseX,mouseY));}  
+  //if(mousePressed && game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
+  //  if(isSelected){
+  //  int[] coords = game.spot(mouseX, mouseY);
+  //    game._board.setTile(given,coords[0],coords[1]);
+  //}
+  //}
+  //if(mousePressed && game.handSpot(mouseX,mouseY) > -1){
+  //  isSelected = true;
+  //  if (game.getTurn() == 1){
+  //    given = game.p1GetTile(game.handSpot(mouseX,mouseY));
+  //  }else{
+  //      given = game.p2GetTile(game.handSpot(mouseX,mouseY));
+  //    }
+  //}
   
   
+  
+ 
     
       
 }//end draw
 
-
+void mouseClicked(){
+    if(game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
+    if(isSelected){
+    int[] coords = game.spot(mouseX, mouseY);
+      game._board.setTile(given,coords[0],coords[1]);
+  }
+  }
+  if(game.handSpot(mouseX,mouseY) > -1){
+    isSelected = true;
+    if (game.getTurn() == 1){
+      given = game.p1GetTile(game.handSpot(mouseX,mouseY));
+    }else{
+        given = game.p2GetTile(game.handSpot(mouseX,mouseY));
+      }
+  }
+}
 
 String copy(int[] first, int[] last, BoardSpace[][] board){  
   String retStr = "";
