@@ -56,7 +56,7 @@ void mousePressed(){
       //exchange
     }
     if(mouseX > 650 && mouseX < 750 && mouseY > 350 && mouseY < 400){
-      //end turn
+      game.endTurn();
     }
 }
 
