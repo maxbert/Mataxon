@@ -9,6 +9,8 @@ class Player{
   public void altScore (int i){
     score += i;
   }
+  Tile getTile(int n){
+    return hand.see(n);}
    
    
 }

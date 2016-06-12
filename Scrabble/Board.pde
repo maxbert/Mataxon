@@ -1,5 +1,5 @@
 class Board{
-   Tile[][] Board= new Tile[15][15];
+   [][] Board= new Tile[15][15];
    Board(){
      for (int i = 0; i < 15; i++){
        for (int j = 0; j < 15; j++){

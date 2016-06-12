@@ -10,6 +10,8 @@ class Hand{
       
   public Tile give(int n){
       return hand.remove(n);}
+  public Tile see(int n){
+      return hand.get(n);}
 }
           
   
