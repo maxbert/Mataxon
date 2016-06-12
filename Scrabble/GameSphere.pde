@@ -23,6 +23,13 @@ import java.util.*;
        return _player2.getTile(i)
       ;}
       
+      void p1Draw(){
+       
+        _player1.draw(_bag);}
+        
+       void p2Draw(){
+           _player2.draw(_bag);}
+           
       
      BoardSpace getTile(int x, int y){
       return _board.getTile(x,y);}
@@ -74,13 +81,29 @@ import java.util.*;
      
    }
    
+   
+   void exchange(){
+     if (turn == 1){
+       for (int i = 0; i <7; i++){
+       Tile temp = _player1.hand.give(i);
+       _bag.accept(temp);}}
+     if (turn == 2){
+       for (int i = 0; i <7; i++){
+       Tile temp = _player1.hand.give(i);
+       _bag.accept(temp);}}
+   }
+   
    void undo(int[][] a){
      if (turn == 1){
        for (int[] i : a){
-         _player1.hand.take((Tile)getTile(i[0],i[1]));}}
+         _player1.hand.take((Tile)getTile(i[0],i[1]));
+         _board.setTile(new BlankSpace(), i[0],i[1]);}
+       } 
+     
      else{
        for (int[] i : a){
-         _player2.hand.take((Tile)getTile(i[0],i[1]));}      
+         _player2.hand.take((Tile)getTile(i[0],i[1]));
+         _board.setTile(new BlankSpace(), i[0],i[1]);}      
      }
    }
      
