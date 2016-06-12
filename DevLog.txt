@@ -7,12 +7,20 @@
                             
                             
                             
-6-9-16
+______________________________________________________    
+6-11-16
+* The factory is all set up (classes are all up and running), now just to send out the game (actually generate the game with instances of each class)
+* Created the board in all its glory
+* Gamesphere created
+	* This is the area where the game instances are created
+* Began interactions with the user, aka selecting tiles and such
+- Jackson Deysine
 
+______________________________________________________    
+6-9-16
 We began to put things together, but i keep getting this persisent bug with image loading. Work needs to be done, and we are unable to keep up wiht our plan. Hopefully the weekend will yield good results. All bugs are squashed right now, and all object classes done. Just the driver is left to write. Then of course the primitive AI. Its gonna be a long sunday night.
 
-Max
-
+- Max Bertfield
 ______________________________________________________    
 6-5-16
 * Tile class and space class are nearly complete
