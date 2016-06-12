@@ -20,6 +20,12 @@
    String boardGetLet(int x, int y){
      return getTile(x,y).getLet();}
      
+  Tile p1GetTile(int i){
+     return _player1.getTile(i)
+    ;}
+      Tile p2GetTile(int i){
+     return _player2.getTile(i)
+    ;}
    String p1GetLet(int i){
      return _player1.getTile(i).getLet();}
      
