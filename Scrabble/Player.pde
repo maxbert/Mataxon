@@ -12,8 +12,5 @@ class Player{
   Tile getTile(int n){
     return hand.see(n);}
    
-  Tile giveTile(int n){
-    return hand.give(n);}
-   
    
 }
