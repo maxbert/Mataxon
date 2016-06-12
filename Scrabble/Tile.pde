@@ -8,7 +8,7 @@ class Tile extends BoardSpace{
     let = "";
     
   }
-  public Tile(String letter, int value, PImage i){
+  public Tile(String letter, int value){
     val = value;
     let = letter;
    // img = i;

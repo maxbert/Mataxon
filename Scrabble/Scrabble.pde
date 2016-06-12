@@ -8,7 +8,7 @@ Tile given = new A();
 
 void setup(){
   size(800,800);
-  frameRate(160);
+  frameRate(1600);
   loadStrings("words.txt");
   split(stuff[0],',');
   image(loadImage("Exchange.jpg"),650.0,100.0,100,50);
@@ -37,7 +37,7 @@ void draw(){
       
 }//end draw
 
-void mouseClicked(){
+void mousePressed(){
     if(game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
     if(isSelected){
     int[] coords = game.spot(mouseX, mouseY);

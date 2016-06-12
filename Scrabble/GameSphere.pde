@@ -65,11 +65,11 @@ import java.util.*;
    //  checkWord();
    //  calcScore();
      
-     if(game.getTurn() = 1){
-       game.setTurn = 2;
+     if(game.getTurn() == 1){
+       game.setTurn(2);
      }
      else{
-       game.setTurn = 1;
+       game.setTurn(1);
      }
      
    }
