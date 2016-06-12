@@ -48,10 +48,8 @@ void mouseClicked(){
     isSelected = true;
     if (game.getTurn() == 1){
       given = game.p1GetTile(game.handSpot(mouseX,mouseY));
-      isSelected = false;
     }else{
         given = game.p2GetTile(game.handSpot(mouseX,mouseY));
-        isSelected = false;
       }
   }
 }
