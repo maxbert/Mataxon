@@ -17,6 +17,28 @@ void setup(){
 }
 void draw(){
   image(loadImage("gray.jpg"),0,0,800.0,800.0);
+  fill(204, 102, 0);
+  rect(128, 638, 43, 43);
+  rect(178, 638, 43, 43);
+  rect(228, 638, 43, 43);
+  rect(278, 638, 43, 43);
+  rect(328, 638, 43, 43);
+  rect(378, 638, 43, 43);
+  rect(428, 638, 43, 43);
+  //for(int a = 0;  a < 8; a ++){
+  //  if(mousePressed){
+  //    if(mouseY > 638 && mouseY < 681){
+  //      if(mouseX > (a*50 + 128) && mouseX <((a+1)*50 + 128)){
+  
+  //      stroke(0,225,0);
+  //      rect(128.0 + a*50.0, 638, 43, 43 );
+  //      }
+  //    }
+  //  }
+  //}
+  rect(648, 98, 103.0, 53.0);//buttomn for exchange
+  rect(648, 348, 103.0, 53.0);//button for endturn
+  rect(673, 173, 53.0, 53.0);
   image(loadImage("Exchange.jpg"),650.0,100.0,100,50);
   image(loadImage("EndTurn.jpg"),650.0,350.0,100,50);
   image(loadImage("Undo.jpg"),675.0,175.0,50,50);

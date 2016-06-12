@@ -1,5 +1,5 @@
 import java.util.*;
- 
+import static javax.swing.JOptionPane.*;
   class GameSphere{
  
   //turn is either 1 for 1st player or 2 for 2nd player
@@ -80,9 +80,19 @@ import java.util.*;
    }
   
    void endTurn(){
+    int nextTurn;
+    if(game.getTurn() ==1){
+      nextTurn = 2;}
+      else{
+        nextTurn = 1;
+      }
    //  checkWord();
    //  calcScore();
-     
+     showMessageDialog(null,"It's player " + nextTurn + "'s turn now!");
+ 
+      
+ 
+      //else{return;};
      if(game.getTurn() == 1){
        game.setTurn(2);
        playedX = new ArrayList<Integer>();
@@ -96,10 +106,10 @@ import java.util.*;
        playedY = new ArrayList<Integer>();
        _player2.draw(_bag);
      }
-     
+      
    }
    
-   int calcScore(){
+  /* int calcScore(){
      int retscore;
      ArrayList<Integer> x = new ArrayList<Integer>();
      ArrayList<Integer> y = new ArrayList<Integer>();
@@ -143,7 +153,7 @@ import java.util.*;
    }
    return retscore;
  }
-   
+   */
    
    void exchange(){
      

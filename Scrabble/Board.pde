@@ -78,6 +78,12 @@ class Board{
       Board[0][11] = new DoubleLetter();
       Board[11][0] = new DoubleLetter();
       
+      Board[3][14] = new DoubleLetter();
+      Board[11][14] = new DoubleLetter();
+      Board[11][7] = new DoubleLetter();
+      Board[14][3] = new DoubleLetter();
+      Board[14][11] = new DoubleLetter();
+      Board[9][9] = new TripleLetter();
    }
    
    public BoardSpace getTile(int x, int y){
