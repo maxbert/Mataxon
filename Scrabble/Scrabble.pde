@@ -6,7 +6,7 @@ GameSphere game = new GameSphere();
 
 void setup(){
   size(800,800);
-  frameRate(10);
+  frameRate(160);
   stuff =loadStrings("words.txt");
   dict = split(stuff[0],',');
 }
