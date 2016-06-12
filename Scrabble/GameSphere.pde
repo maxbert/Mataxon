@@ -1,5 +1,5 @@
 import java.util.*;
-import static javax.swing.JOptionPane.*;
+ import static javax.swing.JOptionPane.*;
   class GameSphere{
  
   //turn is either 1 for 1st player or 2 for 2nd player
@@ -80,80 +80,121 @@ import static javax.swing.JOptionPane.*;
    }
   
    void endTurn(){
-    int nextTurn;
-    if(game.getTurn() ==1){
-      nextTurn = 2;}
-      else{
-        nextTurn = 1;
-      }
    //  checkWord();
-   //  calcScore();
-     showMessageDialog(null,"It's player " + nextTurn + "'s turn now!");
- 
-      
- 
-      //else{return;};
+      int nextTurn =1;
      if(game.getTurn() == 1){
        game.setTurn(2);
+       _player1.altScore(calcScore());
        playedX = new ArrayList<Integer>();
        playedY = new ArrayList<Integer>();
        _player1.draw(_bag);
+       nextTurn = 2;
        
      }
      else{
+       _player2.altScore(calcScore());
        game.setTurn(1);
         playedX = new ArrayList<Integer>();
        playedY = new ArrayList<Integer>();
        _player2.draw(_bag);
+       nextTurn =1;
      }
-      
+     showMessageDialog(null,"It's player " + nextTurn + "'s turn now!");
    }
    
-  /* int calcScore(){
-     int retscore;
-     ArrayList<Integer> x = new ArrayList<Integer>();
-     ArrayList<Integer> y = new ArrayList<Integer>();
+   int calcScore(){
+     int ret = 0;
+     ArrayList<Integer> Checkedx = new ArrayList<Integer>();
+     ArrayList<Integer> Checkedy = new ArrayList<Integer>();
+     for(int i =0; i < playedX.size(); i++){
+       int xcor = playedX.get(i); int ycor = playedY.get(i);
+       if(xcor != 0 && ycor != 0 && getTile(xcor -1,ycor).getLet().length() == 1){
+         int j =1;
+         while(getTile(xcor -j, ycor).getLet().length() == 1){
+           ret += getTile(xcor -j,ycor).getVal();
+           j++;
+           Checkedx.add(xcor -j);
+           Checkedy.add(ycor);
+         }
+       }
+              if(xcor != 14 && ycor != 14 && getTile(xcor +1,ycor).getLet().length() == 1){
+         int j =1;
+         while(getTile(xcor +j, ycor).getLet().length() == 1){
+           ret += getTile(xcor +j,ycor).getVal();
+           j++;
+           Checkedx.add(xcor +j);
+           Checkedy.add(ycor);
+         }
+       }
+              if(xcor != 0 && ycor != 0 && getTile(xcor,ycor-1).getLet().length() == 1){
+         int j =1;
+         while(getTile(xcor, ycor-j).getLet().length() == 1){
+           ret += getTile(xcor,ycor-j).getVal();
+           j++;
+           Checkedx.add(xcor);
+           Checkedy.add(ycor-j);
+         }
+       }
+              if(xcor != 14 && ycor != 14 && getTile(xcor,ycor +1).getLet().length() == 1){
+         int j =1;
+         while(getTile(xcor, ycor+j).getLet().length() == 1){
+           ret += getTile(xcor,ycor+j).getVal();
+           j++;
+           Checkedx.add(xcor);
+           Checkedy.add(ycor+j);
+         }
+       }
+     }
+     return ret;
+  }
+         
      
-     int temp = playedX.size();
-     for (int i = 0; i < temp; i++){
-        if(!y.contains(playedY.get(i)){
-        if(getTile(playedX.get(i) -1, playedY.get(i)).getClass() == Tile.class){
-          int j = 1;
-          while(getTile(playedX.get(i) - j, playedY.get(i)).getClass() == Tile.class && playedX.get(i) - j >= 0){
-            retscore += getTile(playedX.get(i) -j, playedY.get(i)).getVal();
-            j++;
-          }
-        }
-        if(getTile(playedX.get(i) + 1, playedY.get(i)).getClass() == Tile.class){
-          int j = 1;
-          while(getTile(playedX.get(i) + j, playedY.get(i)).getClass() == Tile.class && playedX.get(i) + j < 15){
-            retscore += getTile(playedX.get(i) + j, playedY.get(i)).getVal();
-            j++;
-          }
-        }
-      }
-        if(!x.contains(playedX.get(i))
-        if(getTile(x.get(i), playedY.get(i) -1 ).getClass() == Tile.class){
-                 int j = 1;
-          while(getTile(playedX.get(i), playedY.get(i) -j).getClass() == Tile.class && playedY.get(i) -j >= 0){
-            retscore += getTile(playedX.get(i), playedY.get(i)-j).getVal();
-            j++;
-          }
-        }
-          if(getTile(playedX.get(i), playedY.get(i)+1).getClass() == Tile.class){
-          int j = 1;
-          while(getTile(playedX.get(i), playedY.get(i)+j).getClass() == Tile.class && playedY.get(i) + j < 15){
-            retscore += getTile(playedX.get(i), playedY.get(i)+j).getVal();
-            j++;
-          }
-          }
-       x.add(playedX.get(i));
-       y.add(playedY.get(i));
+     
+   //int calcScore(){
+   //  int retscore =0;
+   //  ArrayList<Integer> x = new ArrayList<Integer>();
+   //  ArrayList<Integer> y = new ArrayList<Integer>();
+     
+   //  int temp = playedX.size();
+   //  for (int i = 0; i < temp; i++){
+   //     if(!y.contains(playedY.get(i))){
+   //     if(!getTile(playedX.get(i) -1, playedY.get(i)).getLet().equals("Error")){
+   //       int j = 1;
+   //       while(!getTile(playedX.get(i) - j, playedY.get(i)).getLet().equals("Error") && playedX.get(i) - j >= 0){
+   //         retscore += getTile(playedX.get(i) -j, playedY.get(i)).getVal();
+   //         j++;
+   //       }
+   //     }
+   //     if(!getTile(playedX.get(i) + 1, playedY.get(i)).getLet().equals("Error")){
+   //       int j = 1;
+   //       while(!getTile(playedX.get(i) + j, playedY.get(i)).getLet().equals("Error") && playedX.get(i) + j < 15){
+   //         retscore += getTile(playedX.get(i) + j, playedY.get(i)).getVal();
+   //         j++;
+   //       }
+   //     }
+   //   }
+   //     if(!x.contains(playedX.get(i))){
+   //     if(!getTile(playedX.get(i), playedY.get(i) -1 ).getLet().equals("Error")){
+   //              int j = 1;
+   //       while(!getTile(playedX.get(i), playedY.get(i) -j).getLet().equals("Error") && playedY.get(i) -j >= 0){
+   //         retscore += getTile(playedX.get(i), playedY.get(i)-j).getVal();
+   //         j++;
+   //       }
+   //     }
+   //       if(!getTile(playedX.get(i), playedY.get(i)+1).getLet().equals("Error")){
+   //       int j = 1;
+   //       while(!getTile(playedX.get(i), playedY.get(i)+j).getLet().equals("Error") && playedY.get(i) + j < 15){
+   //         retscore += getTile(playedX.get(i), playedY.get(i)+j).getVal();
+   //         j++;
+   //       }
+   //       }
+   //    x.add(playedX.get(i));
+   //    y.add(playedY.get(i));
        
-   }
-   return retscore;
- }
-   */
+   //}}
+   //return retscore;
+ //}
+   
    
    void exchange(){
      

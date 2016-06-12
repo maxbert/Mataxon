@@ -72,8 +72,8 @@ void draw(){
   text("Score", 660, 650);
   textFont(f, 18);
   fill(0);
-  text("Player 1:", 650, 680);
-  text("Player 2:", 650, 720);
+  text("Player 1:" + game._player1.score, 650, 680);
+  text("Player 2:" + game._player2.score, 650, 720);
   
   
     
