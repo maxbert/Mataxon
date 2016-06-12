@@ -9,7 +9,7 @@ void setup(){
   loadImage("A.jpg");
   frameRate(10);
   stuff =loadStrings("words.txt");
-  dict = split(stuff[0],',');
+  dict = split(stuff[0],'\n');
 }
 void draw(){
 if(!b.isEmpty()){

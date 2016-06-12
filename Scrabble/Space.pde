@@ -1,4 +1,7 @@
 class BoardSpace{
+  String getLet(){
+    return "Error";
+  }
 }
 
 
@@ -22,6 +25,9 @@ class BlankSpace extends Space{
   boolean playable = true;
   boolean wholeWord = false;
   PImage img = loadImage("BlankSpace.jpg");
+  String getLet(){
+   return "BlankSpace";
+  }
 }
 
 class DoubleLetter extends Space{
@@ -29,6 +35,9 @@ class DoubleLetter extends Space{
   boolean playable = true;
   boolean wholeWord = false;
   PImage img = loadImage("DoubleLetter.jpg");
+    String getLet(){
+   return "DoubleLetter";
+  }
 }
 
 class TripleLetter extends Space{
@@ -36,6 +45,9 @@ class TripleLetter extends Space{
   boolean playable = true;
   boolean wholeWord = false;
   PImage img = loadImage("TripleLetter.jpg");
+    String getLet(){
+   return "TripleLetter";
+  }
 }
 
 class TripleWord extends Space{
@@ -43,12 +55,18 @@ class TripleWord extends Space{
   boolean playable = true;
   boolean wholeWord = true;
   PImage img = loadImage("TripleWord.jpg");
+    String getLet(){
+   return "TripleWord";
+  }
 }
 class StarSpace extends Space{
     int modifier = 2;
   boolean playable = true;
   boolean wholeWord = true;
   PImage img = loadImage("Star.jpg");
+    String getLet(){
+   return "Star";
+  }
 }
 
 class DoubleWord extends Space{
@@ -56,4 +74,7 @@ class DoubleWord extends Space{
   boolean playable = true;
   boolean wholeWord = true;
   PImage img = loadImage("DoubleWord.jpg");
+    String getLet(){
+   return "DoubleWord";
+  }
 }
