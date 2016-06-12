@@ -17,9 +17,9 @@ void draw(){
   }}
   for (int i = 0; i < 7; i ++){
     if (game.getTurn() == 1){
-      image(loadImage(p1GetLet(i) + ".jpg"), (180 + (i * 50)) , (640), 40.0, 40.0);}
+      image(loadImage(game.p1GetLet(i) + ".jpg"), (180 + (i * 50)) , (640), 40.0, 40.0);}
     else{
-    image(loadImage(p2GetLet(i) + ".jpg"), (180 + (i * 50)) , (640), 40.0, 40.0);}
+    image(loadImage(game.p2GetLet(i) + ".jpg"), (180 + (i * 50)) , (640), 40.0, 40.0);}
   }
       
 }//end draw

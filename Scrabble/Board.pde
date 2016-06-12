@@ -1,9 +1,9 @@
 class Board{
-   [][] Board= new Tile[15][15];
+   BoardSpace[][] Board= new BoardSpace[15][15];
    Board(){
      for (int i = 0; i < 15; i++){
        for (int j = 0; j < 15; j++){
-         Board[i][j] = new BlackSpace();}}
+         Board[i][j] = new BlankSpace();}}
          
       Board[7][7] = new StarSpace();
       
@@ -80,18 +80,18 @@ class Board{
       
    }
    
-   public Tile get(int x, int y){
+   public BoardSpace getTile(int x, int y){
      return Board[x][y];}
      
    //returns what was previous present
-   public Tile set(Tile t, int x, int y){
-     Tile temp = Board[x][y];
+   public BoardSpace setTile(BoardSpace t, int x, int y){
+     BoardSpace temp = Board[x][y];
      Board[x][y] = t;
      return temp;}
      
    public void swap(int x1, int y1, int x2, int y2){
-     Tile temp = set(get(x1,y1),x2,y2);
-     set(temp, x1,y1);}
+     BoardSpace temp = setTile(getTile(x1,y1),x2,y2);
+     setTile(temp, x1,y1);}
 }
      
     

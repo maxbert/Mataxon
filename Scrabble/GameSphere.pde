@@ -11,17 +11,17 @@ class GameSphere{
   int getTurn(){
     return turn;}
   
-   Tile boardGetTile(int x, int y){
-    return _board.get(x,y);}
+   BoardSpace getTile(int x, int y){
+    return _board.getTile(x,y);}
     
    String boardGetLet(int x, int y){
      return getTile(x,y).getLet();}
      
    String p1GetLet(int i){
-     return _player1.getTile(i);}
+     return _player1.getTile(i).getLet();}
      
    String p2GetLet(int i){
-     return _player2.getTile(i);}
+     return _player2.getTile(i).getLet();}
      
      
 }
