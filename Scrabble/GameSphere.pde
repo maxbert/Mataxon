@@ -23,7 +23,16 @@ class GameSphere{
    String p2GetLet(int i){
      return _player2.getTile(i).getLet();}
      
-     
+int[] spot(float x, float y){
+ int[] spots = new int[2] ;
+ int xcor = (int)(x);
+ int ycor = (int)(y);
+ spots[0] = xcor/40;
+ spots[1] = ycor/40;
+ return spots;
+}
+
+
 }
 
   

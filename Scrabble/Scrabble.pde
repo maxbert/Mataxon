@@ -21,18 +21,16 @@ void draw(){
     else{
     image(loadImage(game.p2GetLet(i) + ".jpg"), (180 + (i * 50)) , (640), 40.0, 40.0);}
   }
+  if(mousePressed && game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
+    int[] coords = game.spot(mouseX, mouseY);
+      println("" + coords[0] + coords[1]);
+  }
+    
       
 }//end draw
 
 
-int[] spot(float x, float y){
- int[] spots = new int[2] ;
- int xcor = (int)(x);
- int ycor = (int)(y);
- spots[1] = xcor/40;
- spots[2] = ycor/40;
- return spots;
-}
+
 String copy(int[] first, int[] last, BoardSpace[][] board){  
   String retStr = "";
   int xcor1 = first[1];
