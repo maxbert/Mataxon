@@ -4,6 +4,7 @@
   
   //turn is either 1 for 1st player or 2 for 2nd player
   int turn = 1;
+  ArrayList lettersPlayed = new ArrayList();
 
   
   Board _board = new Board();
@@ -42,6 +43,11 @@ int handSpot(float x, float y){
    return xcor/50;}
  return -1;}
  
+void exchange(int player){
+  if (player == 1){
+    for (int i = 0; i < 7; i++){
+    _player1.giveTile(i);}
+    
 
 
 }

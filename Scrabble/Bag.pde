@@ -7,4 +7,7 @@ bagged.add(new A()); i++; } i = 0; while(i < 2){ bagged.add(new B()); i++; } i =
 }
 Tile take(){ if (!isEmpty()){ int num = (int)(Math.random()*bagged.size()); return bagged.remove(num);} else{ bagged.remove(0); return new A();} } 
 int getSize(){ return bagged.size();} 
-boolean isEmpty(){ return bagged.size() == 0; } }
+boolean isEmpty(){ return bagged.size() == 0; }
+void obtain(Tile n){
+  bagged.add(n);}
+}

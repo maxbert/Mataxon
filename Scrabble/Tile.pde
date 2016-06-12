@@ -465,7 +465,7 @@ class Z extends Tile{
   int val = 10;
     public int getVal(){
     return val;
-  }
+  }}
   public String getLet(){
     return let;
   }
