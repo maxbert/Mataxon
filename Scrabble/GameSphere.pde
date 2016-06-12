@@ -7,6 +7,7 @@ import java.util.*;
   ArrayList<Integer>  playedX = new ArrayList<Integer>();
   ArrayList<Integer>  playedY = new ArrayList<Integer>();
   Board _board = new Board();
+  Board _referenceBoard = new Board();
   Bag _bag = new Bag();
   Player _player1 = new Player(_bag);
   Player _player2 = new Player(_bag);
@@ -212,14 +213,14 @@ import java.util.*;
        if (turn == 1){
          for(int i =0; i < temp; i++){
            _player1.hand.take((Tile)getTile(x.get(0), y.get(0)));
-           _board.setTile(new BlankSpace(), x.get(0),y.get(0));
+           _board.setTile(_referenceBoard.getTile(x.get(0),y.get(0)), x.get(0),y.get(0));
          x.remove(0); y.remove(0);}
          } 
        
        else{
          for (int i =0; i < temp; i++){
    _player2.hand.take((Tile)getTile(x.get(0), y.get(0)));
-           _board.setTile(new BlankSpace(), x.get(0),y.get(0));
+           _board.setTile(_referenceBoard.getTile(x.get(0),y.get(0)), x.get(0),y.get(0));
          x.remove(0); y.remove(0);}      
        }
      }
