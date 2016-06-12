@@ -87,19 +87,25 @@ import java.util.*;
        game.setTurn(2);
        playedX = new ArrayList<Integer>();
        playedY = new ArrayList<Integer>();
+       _player1.draw(_bag);
        
      }
      else{
        game.setTurn(1);
         playedX = new ArrayList<Integer>();
        playedY = new ArrayList<Integer>();
+       _player2.draw(_bag);
      }
      
    }
    
    
    void exchange(){
+     
      if (turn == 1){
+       if(_player1.hand.size() < 7){
+         return;
+       }
        int i =0;
        while(i < 7){
        Tile temp = _player1.hand.give(0);
@@ -107,6 +113,9 @@ import java.util.*;
      i++;}
      _player1.draw(_bag);}
      else{
+          if(_player2.hand.size() < 7){
+         return;
+       }
        int i = 0;
        while(i < 7){
        Tile temp = _player2.hand.give(0);
