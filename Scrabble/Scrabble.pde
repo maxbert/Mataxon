@@ -9,8 +9,8 @@ void setup(){
   frameRate(160);
   stuff =loadStrings("words.txt");
   dict = split(stuff[0],',');
-  image(Exchange.jpg,700,125);
-  image(EndTurn.jpg,700,375);
+  image(loadImage("Exchange.jpg"),700.0,125.0,100,50);
+  image(loadImage("EndTurn.jpg"),700.0,375.0,100,150);
 }
 void draw(){
   for(int i = 0; i < 15; i ++){
