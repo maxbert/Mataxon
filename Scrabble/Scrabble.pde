@@ -127,7 +127,7 @@ void mousePressed(){
       game.undo();
     }
     if(mouseX > 650 && mouseX < 750 && mouseY > 350 && mouseY < 400){
-      game.endTurn();
+      game.endTurn(dictionary);
     }
 }
 

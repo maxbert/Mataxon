@@ -80,14 +80,10 @@ import java.util.*;
    return -1;
    }
   
-   void endTurn(){
-   //  checkWord();
+   void endTurn(ArrayList<String> dictio){
+     println(calcWords(dictio));
+      
       int nextTurn =1;
-      Checker c = new Checker();
-      if (!c.wordDir(playedX,playedY)){
-        undo();
-        return;
-      }
      if(game.getTurn() == 1){
        game.setTurn(2);
        _player1.altScore(calcScore());
@@ -217,8 +213,10 @@ import java.util.*;
      boolean calcWords (ArrayList dictio){
        boolean bool = true;
        for (int i = 0; i < playedX.size(); i++){
+         if(calcWordVert(playedX.get(i),playedY.get(i)).length() > 1 || calcWordHor(playedX.get(i),playedY.get(i)).length() > 1){
          if (!(dictio.contains(calcWordVert(playedX.get(i), playedY.get(i))) || dictio.contains(calcWordHor(playedX.get(i), playedY.get(i))))){
            bool = false;}
+       }
        }
        return bool;}
      
