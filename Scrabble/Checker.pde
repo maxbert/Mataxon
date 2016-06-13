@@ -16,10 +16,10 @@ class Checker{
     for (int i = 0; i < x.size()-1; i++){
       if (x.get(i) != xcor){
         isVert = false;}}
-    if (isHor){
-      return 0;}
     if (isVert){
       return 1;}
+    if (isHor){
+      return 0;}
     else{
       return -1;}
   
