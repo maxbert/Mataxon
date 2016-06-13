@@ -98,9 +98,6 @@ void draw(){
   
     //println(dict[1]);
   } //else
-  
-  println(dictionary.get(i));
-  i++;
 }//end draw
 
 void mousePressed(){
