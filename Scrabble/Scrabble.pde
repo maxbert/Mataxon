@@ -13,17 +13,31 @@ void setup(){
   frameRate(1600);
   stuff =loadStrings("words.txt");
   dict = stuff[0].split("\n");
-  image(loadImage("Exchange.jpg"),650.0,100.0,100,50);
-  image(loadImage("EndTurn.jpg"),650.0,350.0,100,50);
-  image(loadImage("Undo.jpg"),675.0,175.0,50,50);
+  
 }
 
 int i =0;
+boolean gameState = false;
 void draw(){
-  i++;
   PFont f;  
   f = createFont("Aller_Rg.ttf", 32, true);
+  while(!gameState){
+    
+    image(loadImage("Scrab.jpg"), 0,0,800,800);
+    textFont(f, 100);
+    fill(0);
+    text("Click Anywhere to Play!",300,300);
+    
+    if(mousePressed){
+      gameState = true;
+    }
+  }
+  i++;
+  
   image(loadImage("gray.jpg"),0,0,800.0,800.0);
+  image(loadImage("Exchange.jpg"),650.0,100.0,100,50);
+  image(loadImage("EndTurn.jpg"),650.0,350.0,100,50);
+  image(loadImage("Undo.jpg"),675.0,175.0,50,50);
   fill(204, 102, 0);
   rect(128, 638, 43, 43);
   rect(178, 638, 43, 43);
