@@ -6,7 +6,17 @@
                             /____/  
                             
                             
-                            
+ 
+______________________________________________________    
+6-12-16
+* Game is working like Rihanna
+* Beautified it 10 fold - it’s really attractive 
+* Team bonded 100 fold!
+* Score tracked
+* Splash Screen wet as ever
+* The dictionary was imported and successfully used as a reference for the words played
+* Successfully worked out how to keep track of the special spaces and their scoring moderations
+- Jackson Deysine                           
 ______________________________________________________    
 6-11-16
 * The factory is all set up (classes are all up and running), now just to send out the game (actually generate the game with instances of each class)
