@@ -308,6 +308,19 @@ import java.util.*;
        
          
      
+  boolean calcEveryWord(ArrayList<String> dictio){
+    for(int x =0; x<15;x++){
+      for(int y =0; y<15;y++){
+        if(calcWordVert(x,y).length() > 1 || calcWordHor(x,y).length() > 1){
+         if (!(dictio.contains(calcWordVert(x, y).toLowerCase()) || dictio.contains(calcWordHor(x,y).toLowerCase()))){
+           return false;
+         }
+        }
+      }
+    }
+    return true;
+        
+    
   
-  
-  }//end class
+  }
+}//end class
