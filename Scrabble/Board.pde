@@ -87,7 +87,12 @@ class Board{
    }
    
    public BoardSpace getTile(int x, int y){
-     return Board[x][y];}
+     if(x <15 && y<15){
+     return Board[x][y];
+   }else{
+     return Board[14][14];
+   }
+   }
      
    //returns what was previous present
    public BoardSpace setTile(BoardSpace t, int x, int y){
