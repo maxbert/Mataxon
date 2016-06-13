@@ -10,7 +10,7 @@ Here at Mataxon we enjoy a good word game, so we figured we'd let you have one t
 
 1. Open Scrabble.pde in Processing (let it sit to let images  load)
 2. Run Scrabble.pde
-   -  if it crashes, just ignore it and run again (Sometimes the images don't load properly)
+   -  If it crashes, just ignore it and run again (Sometimes the images don't load properly)
 3. Click to continue
 4. Player one begins by playing a word which starts at the center tile
    -  Begin by clicking on a tile in your tray, and then clicking a space on the board
