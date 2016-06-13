@@ -6,11 +6,13 @@ import java.util.*;
   int turn = 1;
   ArrayList<Integer>  playedX = new ArrayList<Integer>();
   ArrayList<Integer>  playedY = new ArrayList<Integer>();
+  
   Board _board = new Board();
   Board _referenceBoard = new Board();
   Bag _bag = new Bag();
   Player _player1 = new Player(_bag);
   Player _player2 = new Player(_bag);
+  Player AI = new Player(_bag);
   
   //TURN METHODS
   int getTurn(){
@@ -106,6 +108,7 @@ import java.util.*;
        nextTurn =1;
      }
      showMessageDialog(null,"It's player " + nextTurn + "'s turn now!");
+     
    }
    
    int calcScore(){
@@ -319,8 +322,50 @@ import java.util.*;
       }
     }
     return true;
-        
-    
-  
   }
+  
+       void aiPlace(ArrayList<String> dict){
+       if (AI.hand.size() == 0){
+         return;}
+          for (int j = 0; j < 15; j ++){
+            
+            for (int k = 0; k < 15; k++){
+              
+              for (int i = 0 ; i < AI.hand.size(); i ++){
+                
+                if (getTile(j,k).getLet().length() < 1){
+                  
+                _board.setTile(AI.hand.give(i), j+1,k);
+                aiPlace(dict);
+                if (calcEveryWord(dict)){
+                  return;}
+                _board.setTile(_referenceBoard.getTile(j+1,k), j+1, k);
+                
+                  
+                _board.setTile(AI.hand.give(i), j-1,k);
+                aiPlace(dict);
+                if (calcEveryWord(dict)){
+                  return;}
+                _board.setTile(_referenceBoard.getTile(j-1,k),j,k);
+                
+                  
+                _board.setTile(AI.hand.give(i), j,k + 1);
+                aiPlace(dict);
+                if (calcEveryWord(dict)){
+                  return;}
+                _board.setTile(_referenceBoard.getTile(j,k + 1),j,k);
+                
+                  
+                _board.setTile(AI.hand.give(i), j,k - 1);
+                aiPlace(dict);
+                if (calcEveryWord(dict)){
+                  return;}
+                _board.setTile(_referenceBoard.getTile(j,k - 1),j,k);
+                
+                
+              
+                }
+              }
+            }
+          }}
 }//end class
