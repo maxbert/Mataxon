@@ -107,13 +107,15 @@ void mousePressed(){
     if(game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
     if(isSelected){
     int[] coords = game.spot(mouseX, mouseY);
+    if(game._board.getTile(coords[0],coords[1]).getLet().length() > 1){
       game._board.setTile(given,coords[0],coords[1]);
       game.playedX.add(coords[0]); game.playedY.add(coords[1]);
       isSelected = false;
-    
+    }
   }
   }
   if(game.handSpot(mouseX,mouseY) > -1){
+    if (!isSelected){
     isSelected = true;
     if (game.getTurn() == 1){
       given = game.p1GetTile(game.handSpot(mouseX,mouseY));
@@ -124,6 +126,7 @@ void mousePressed(){
         game._player2.hand.give(game.handSpot(mouseX,mouseY));
    
       }
+  }
   }
     if(mouseX > 650 && mouseX < 750 && mouseY > 100 && mouseY < 150){
       game.exchange();
