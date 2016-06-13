@@ -30,7 +30,7 @@ boolean wordDir(ArrayList<Integer> x, ArrayList<Integer> y){
     Collections.sort(y);
     Collections.sort(x);
     if(dir == 0){//thus its going horizontal
-      for(int a = 0; a < x.size() -1; a++){
+      for(int a = 0; a < x.size() - 1; a++){
           if(x.get(a) + 1 != x.get(a+1)){
             bool = false;
             break;
@@ -38,7 +38,7 @@ boolean wordDir(ArrayList<Integer> x, ArrayList<Integer> y){
       }
     }
     else if(dir == 1){
-      for(int a = 0; a < y.size() -1; a++){
+      for(int a = 0; a < y.size() - 1; a++){
           if(y.get(a) + 1 != y.get(a+1)){
             bool = false;
             break;
