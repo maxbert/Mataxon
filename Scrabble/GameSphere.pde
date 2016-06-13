@@ -216,8 +216,8 @@ import java.util.*;
      
      boolean calcWords (ArrayList dictio){
        boolean bool = true;
-       for (int i = 0; i < playedX; i++){
-         if (!(dictio.contains(calcWordVert(playedX.get(i), playedY.get(i))) || dict.contains(calcWordHor(playedX.get(i), playedY.get(i)))){
+       for (int i = 0; i < playedX.size(); i++){
+         if (!(dictio.contains(calcWordVert(playedX.get(i), playedY.get(i))) || dictio.contains(calcWordHor(playedX.get(i), playedY.get(i))))){
            bool = false;}
        }
        return bool;}
