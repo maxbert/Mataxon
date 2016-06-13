@@ -12,12 +12,12 @@ void setup(){
   f = createFont("Windsong.ttf", 32, true);
   size(800,800);
   frameRate(1600);
-  stuff =loadStrings("words.txt");
-  dict = stuff[0].split("\n");
+  dict =loadStrings("words.txt");
    dictionary = new ArrayList<String>(Arrays.asList(dict));
 }
 
 int i =0;
+
 boolean gameState = false;
 void draw(){
   PFont f;  
@@ -98,6 +98,9 @@ void draw(){
   
     //println(dict[1]);
   } //else
+  
+  println(dictionary.get(i));
+  i++;
 }//end draw
 
 void mousePressed(){

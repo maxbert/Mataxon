@@ -81,7 +81,11 @@ import java.util.*;
    }
   
    void endTurn(ArrayList<String> dictio){
-     println(calcWords(dictio));
+     if(!calcWords(dictio)){
+       undo();
+       return;
+     }
+       
       
       int nextTurn =1;
      if(game.getTurn() == 1){
@@ -214,7 +218,7 @@ import java.util.*;
        boolean bool = true;
        for (int i = 0; i < playedX.size(); i++){
          if(calcWordVert(playedX.get(i),playedY.get(i)).length() > 1 || calcWordHor(playedX.get(i),playedY.get(i)).length() > 1){
-         if (!(dictio.contains(calcWordVert(playedX.get(i), playedY.get(i))) || dictio.contains(calcWordHor(playedX.get(i), playedY.get(i))))){
+         if (!(dictio.contains(calcWordVert(playedX.get(i), playedY.get(i)).toLowerCase()) || dictio.contains(calcWordHor(playedX.get(i), playedY.get(i)).toLowerCase()))){
            bool = false;}
        }
        }
