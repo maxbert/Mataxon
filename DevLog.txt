@@ -16,6 +16,7 @@ ______________________________________________________
 * Splash Screen wet as ever
 * The dictionary was imported and successfully used as a reference for the words played
 * Successfully worked out how to keep track of the special spaces and their scoring moderations
+* Squashed bug concerning multiple tile selection
 - Jackson Deysine                           
 ______________________________________________________    
 6-11-16
