@@ -9,7 +9,7 @@ Tile given = new A();
 
 void setup(){
   PFont f;  
-  f = createFont("Aller_Rg.ttf", 32, true);
+  f = createFont("Windsong.ttf", 32, true);
   size(800,800);
   frameRate(1600);
   stuff =loadStrings("words.txt");
@@ -21,20 +21,21 @@ int i =0;
 boolean gameState = false;
 void draw(){
   PFont f;  
-  f = createFont("Aller_Rg.ttf", 32, true);
- /* while(!gameState){
+  f = createFont("Windsong.ttf", 32, true);
+  fill(0);
+   if(!gameState){
     
     image(loadImage("Scrab.jpg"), 0,0,800,800);
     textFont(f, 100);
     fill(0);
-    text("Click Anywhere to Play!",300,300);
+    text("Click Anywhere to Play!",50,200);
     
     if(mousePressed){
       gameState = true;
     }
-  }*/
-  i++;
+  }
   
+  else{
   image(loadImage("gray.jpg"),0,0,800.0,800.0);
   image(loadImage("Exchange.jpg"),650.0,100.0,100,50);
   image(loadImage("EndTurn.jpg"),650.0,350.0,100,50);
@@ -85,17 +86,18 @@ void draw(){
   //if(mousePressed && game.handSpot(mouseX,mouseY) > -1){
   //  println("" + game.handSpot(mouseX,mouseY));}  
   //score
-  textFont(f, 30);
+  PFont p;  
+  p = createFont("Aller_Rg", 32, true);
   fill(0);
   text("Score", 660, 650);
-  textFont(f, 18);
+  textFont(p, 18);
   fill(0);
-  text("Player 1:" + game._player1.score, 650, 680);
-  text("Player 2:" + game._player2.score, 650, 720);
+  text("Player 1: " + game._player1.score, 650, 680);
+  text("Player 2: " + game._player2.score, 650, 720);
   
   
     //println(dict[1]);
-      
+  } //else
 }//end draw
 
 void mousePressed(){
