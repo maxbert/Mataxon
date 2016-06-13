@@ -10,6 +10,10 @@
 ______________________________________________________    
 6-12-16
 * Game is working like Rihanna
+* Got Placement and turns working
+* Got undo working
+* Got exchange working
+* Got word finder working
 * Beautified it 10 fold - it’s really attractive 
 * Team bonded 100 fold!
 * Score tracked
@@ -18,6 +22,7 @@ ______________________________________________________
 * Successfully worked out how to keep track of the special spaces and their scoring moderations
 * Squashed bug concerning multiple tile selection
 * Game completed, no critters in sight
+* attempted AI, abandoned very quickly.
 - Jackson Deysine                           
 ______________________________________________________    
 6-11-16
