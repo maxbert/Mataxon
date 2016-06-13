@@ -28,6 +28,10 @@ class BlankSpace extends Space{
   String getLet(){
    return "BlankSpace";
   }
+  int getModifier(){return modifier;}
+  boolean getWholeWord(){
+    return wholeWord;
+  }
 }
 
 class DoubleLetter extends Space{
@@ -36,6 +40,10 @@ class DoubleLetter extends Space{
   boolean wholeWord = false;
     String getLet(){
    return "DoubleLetter";
+  }
+  int getModifier(){return modifier;}
+  boolean getWholeWord(){
+    return wholeWord;
   }
 }
 
@@ -46,6 +54,10 @@ class TripleLetter extends Space{
     String getLet(){
    return "TripleLetter";
   }
+  int getModifier(){return modifier;}
+  boolean getWholeWord(){
+    return wholeWord;
+  }
 }
 
 class TripleWord extends Space{
@@ -55,6 +67,10 @@ class TripleWord extends Space{
     String getLet(){
    return "TripleWord";
   }
+  int getModifier(){return modifier;}
+  boolean getWholeWord(){
+    return wholeWord;
+  }
 }
 class StarSpace extends Space{
     int modifier = 2;
@@ -62,6 +78,10 @@ class StarSpace extends Space{
   boolean wholeWord = true;
     String getLet(){
    return "star";
+  }
+  int getModifier(){return modifier;}
+  boolean getWholeWord(){
+    return wholeWord;
   }
 }
 
@@ -71,5 +91,9 @@ class DoubleWord extends Space{
   boolean wholeWord = true;
     String getLet(){
    return "DoubleWord";
+  }
+  int getModifier(){return modifier;}
+  boolean getWholeWord(){
+    return wholeWord;
   }
 }

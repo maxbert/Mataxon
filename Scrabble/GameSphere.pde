@@ -162,11 +162,34 @@ import java.util.*;
      Checkedx.add(playedX.get(i));
      Checkedy.add(playedY.get(i));
      }
+     ret += extraLetterValue();
      
+     ret = ret * extraWordValue();
      
      return ret;
    }
          
+         
+   int extraLetterValue(){
+     int ret = 0;
+     for (int i = 0; i < playedX.size(); i++){
+       if (((Space)(_referenceBoard.getTile(playedX.get(i), playedY.get(i)))).getWholeWord() == false && ((Space)(_referenceBoard.getTile(playedX.get(i), playedY.get(i)))).getModifier() > 1){
+         ret += getTile(playedX.get(i), playedY.get(i)).getVal() * (((Space)(_referenceBoard.getTile(playedX.get(i), playedY.get(i)))).getModifier() - 1);}
+       }
+       return ret;
+   }
+   
+   int extraWordValue(){
+     int ret = 1;
+     //print(playedX.size() + "");
+     for (int i = 0; i < playedX.size(); i++){
+      // print(((Space)(_referenceBoard.getTile(playedX.get(i), playedY.get(i)))).getLet());print(((Space)(_referenceBoard.getTile(playedX.get(i), playedY.get(i)))).getModifier());
+       if (((Space)(_referenceBoard.getTile(playedX.get(i), playedY.get(i)))).getWholeWord() == true && ((Space)(_referenceBoard.getTile(playedX.get(i), playedY.get(i)))).getModifier() > 1){
+         ret = ret * ((Space)(_referenceBoard.getTile(playedX.get(i), playedY.get(i)))).getModifier();}
+     }
+     //print(ret + "");
+     return ret;}
+       
 
    
    void exchange(){
