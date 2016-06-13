@@ -96,7 +96,7 @@ void draw(){
     //println(dict[1]);
       
 }//end draw
-
+ArrayList<String> dictionary = new ArrayList<String>(Arrays.asList(dict));
 void mousePressed(){
     if(game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
     if(isSelected){
