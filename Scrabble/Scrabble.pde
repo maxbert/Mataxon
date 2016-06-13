@@ -21,7 +21,7 @@ boolean gameState = false;
 void draw(){
   PFont f;  
   f = createFont("Aller_Rg.ttf", 32, true);
-  while(!gameState){
+ /* while(!gameState){
     
     image(loadImage("Scrab.jpg"), 0,0,800,800);
     textFont(f, 100);
@@ -31,7 +31,7 @@ void draw(){
     if(mousePressed){
       gameState = true;
     }
-  }
+  }*/
   i++;
   
   image(loadImage("gray.jpg"),0,0,800.0,800.0);

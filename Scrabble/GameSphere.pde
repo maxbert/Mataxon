@@ -168,7 +168,51 @@ import java.util.*;
      
      return ret;
    }
+        
          
+         
+         
+         
+         
+          String calcWordHor(int xcor, int ycor){
+     String ret = "";
+     ret += getTile(xcor,ycor).getLet();
+       if(xcor != 0 && ycor != 0 && getTile(xcor -1,ycor).getLet().length() == 1){
+         int j =1;
+         while(getTile(xcor -j, ycor).getLet().length() == 1){
+           ret = getTile(xcor -j,ycor).getLet() + ret;
+           j++;
+         }
+       }
+      if(xcor != 14 && ycor != 14 && getTile(xcor +1,ycor).getLet().length() == 1){
+         int j =1;
+         while(getTile(xcor +j, ycor).getLet().length() == 1){
+           ret += getTile(xcor +j,ycor).getLet();
+           j++;
+
+         }
+       }
+     return ret;}
+     
+               String calcWordVert(int xcor, int ycor){
+     String ret = "";
+     ret += getTile(xcor,ycor).getLet();
+       if(xcor != 0 && ycor != 0 && getTile(xcor,ycor -1).getLet().length() == 1){
+         int j =1;
+         while(getTile(xcor, ycor-j).getLet().length() == 1){
+           ret = getTile(xcor,ycor-j).getLet() + ret;
+           j++;
+         }
+       }
+      if(xcor != 14 && ycor != 14 && getTile(xcor,ycor+1).getLet().length() == 1){
+         int j =1;
+         while(getTile(xcor, ycor+j).getLet().length() == 1){
+           ret += getTile(xcor,ycor+j).getLet();
+           j++;
+
+         }
+       }
+     return ret;}
          
    int extraLetterValue(){
      int ret = 0;
