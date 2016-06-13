@@ -2,6 +2,7 @@
 import java.util.*;
  String[] stuff = {""};
   String[] dict;
+  ArrayList<String> dictionary;
 GameSphere game = new GameSphere();
 boolean isSelected = false;
 Tile given = new A();
@@ -13,7 +14,7 @@ void setup(){
   frameRate(1600);
   stuff =loadStrings("words.txt");
   dict = stuff[0].split("\n");
-  
+   dictionary = new ArrayList<String>(Arrays.asList(dict));
 }
 
 int i =0;
@@ -96,7 +97,7 @@ void draw(){
     //println(dict[1]);
       
 }//end draw
-ArrayList<String> dictionary = new ArrayList<String>(Arrays.asList(dict));
+
 void mousePressed(){
     if(game.spot(mouseX,mouseY)[0] < 15 && game.spot(mouseX,mouseY)[1] < 15) {
     if(isSelected){
